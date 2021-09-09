@@ -67,6 +67,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Recibiendo dirección</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estas son sus direcciones de Particl para enviar pagos. Siempre verifique el monto y la dirección de recepción antes de enviar monedas.</translation>
     </message>
@@ -74,6 +75,15 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Estas son sus direcciones de Particl para recibir los pagos.
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones de Qtum para enviar pagos. Siempre verifique el monto y la dirección de recepción antes de enviar monedas.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation>Estas son sus direcciones de Qtum para recibir los pagos.
+>>>>>>> project-a/time/qtumcore0.21
 Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir para crear una nueva direccion.  Firmar es posible solo con la direccion del tipo "legado"</translation>
     </message>
     <message>
@@ -171,8 +181,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Confirmar el cifrado de la billetera</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
         <translation>Advertencia: si encriptas tu billetera y pierdes tu contraseña &lt;b&gt; PIERDES TODOS TUS PARTICL &lt;/b&gt; !</translation>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+        <translation>Advertencia: si encriptas tu billetera y pierdes tu contraseña &lt;b&gt; PIERDES TODOS TUS QTUMS &lt;/b&gt; !</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -191,8 +206,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Introducir la vieja contraseña y la nueva contraseña para la billetera.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
         <translation>Recuerda que codificando tu billetera no garantiza mantener a salvo tus particl en caso de tener virus en el computador.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <translation>Recuerda que codificando tu billetera no garantiza mantener a salvo tus qtums en caso de tener virus en el computador.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -255,7 +275,7 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firma y mensaje ...</translation>
@@ -365,8 +385,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Proxy &lt;b&gt;habilitado&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
         <translation>Enviando monedas a una dirección de Particl</translation>
+=======
+        <source>Send coins to a Qtum address</source>
+        <translation>Enviando monedas a una dirección de Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -401,12 +426,21 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Encripta las claves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Firme mensajes con sus direcciones de Particl para demostrar que los posee</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Verifique los mensajes para asegurarse de que fueron firmados con las direcciones de Particl especificadas</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Firme mensajes con sus direcciones de Qtum para demostrar que los posee</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Verifique los mensajes para asegurarse de que fueron firmados con las direcciones de Qtum especificadas</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -425,8 +459,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Barra de herramientas de pestañas</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and particl: URIs)</source>
         <translation>Solicitar pagos (genera códigos QR y particl: URIs)</translation>
+=======
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <translation>Solicitar pagos (genera códigos QR y qtum: URIs)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -441,8 +480,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Y opciones de línea de comando</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Particl network</source>
         <translation><numerusform>%n conexión activa hacia la red Particl</numerusform><numerusform>%n conexiones activas hacia la red Particl</numerusform></translation>
+=======
+        <source>%n active connection(s) to Qtum network</source>
+        <translation><numerusform>%n conexión activa hacia la red Qtum</numerusform><numerusform>%n conexiones activas hacia la red Qtum</numerusform></translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -489,12 +533,21 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>&amp;Load PSBT desde el archivo...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
         <translation>Cargar transacción de Particl parcialmente firmada</translation>
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Particl command-line options</source>
         <translation>Muestre el mensaje de ayuda %1 para obtener una lista con posibles opciones de línea de comandos de Particl</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+        <translation>Cargar transacción de Qtum parcialmente firmada</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <translation>Muestre el mensaje de ayuda %1 para obtener una lista con posibles opciones de línea de comandos de Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Window</source>
@@ -781,8 +834,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
         <translation>La dirección ingresada "%1" no es una dirección válida de Particl.</translation>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <translation>La dirección ingresada "%1" no es una dirección válida de Qtum.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -866,8 +924,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Use un directorio de datos personalizado:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -878,8 +941,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Aproximadamente %1 GB de datos se almacenarán en este directorio.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Particl block chain.</source>
         <translation>%1 descargará y almacenará una copia de la cadena de bloques de Particl.</translation>
+=======
+        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <translation>%1 descargará y almacenará una copia de la cadena de bloques de Qtum.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -909,12 +977,21 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Formar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</source>
         <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red particl, como se detalla a continuación.</translation>
     </message>
     <message>
         <source>Attempting to spend particl that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>La red no aceptará intentar gastar particl que se vean afectados por transacciones aún no mostradas</translation>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red qtum, como se detalla a continuación.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>La red no aceptará intentar gastar qtums que se vean afectados por transacciones aún no mostradas</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1058,8 +1135,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>&amp; Gastar cambio no confirmado</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Abra automáticamente el puerto cliente de Particl en el enrutador. Esto solo funciona cuando su enrutador admite UPnP y está habilitado.</translation>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abra automáticamente el puerto cliente de Qtum en el enrutador. Esto solo funciona cuando su enrutador admite UPnP y está habilitado.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1074,8 +1156,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Permitir conexiones entrantes</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a SOCKS5 proxy.</source>
         <translation>Conéctese a la red de Particl a través de un proxy SOCKS5.</translation>
+=======
+        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <translation>Conéctese a la red de Qtum a través de un proxy SOCKS5.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1213,8 +1300,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Configurar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
         <translation>La información mostrada puede estar desactualizada. Su billetera se sincroniza automáticamente con la red de Particl después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su billetera se sincroniza automáticamente con la red de Qtum después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1299,8 +1391,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Error de solicitud de pago</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
         <translation>No se puede iniciar Particl: controlador de clic para pagar</translation>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+        <translation>No se puede iniciar Qtum: controlador de clic para pagar</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI handling</source>
@@ -1311,8 +1408,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Dirección de pago inválida %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</source>
         <translation>¡URI no puede ser analizado! Esto puede deberse a una dirección de Particl no válida o a parámetros de URI mal formados.</translation>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <translation>¡URI no puede ser analizado! Esto puede deberse a una dirección de Qtum no válida o a parámetros de URI mal formados.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1353,8 +1455,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Cantidad</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
         <translation>Ingrese una dirección de Particl (por ejemplo, %1)</translation>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+        <translation>Ingrese una dirección de Qtum (por ejemplo, %1)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>%1 d</source>
@@ -1746,8 +1853,13 @@ Usa el boton "Crear nueva direccion de recibimiento" en la pestaña de recibir p
         <translation>Mensaje:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</source>
         <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se mostrará cuando se abra la solicitud. Nota: El mensaje no se enviará con el pago a través de la red de Particl.</translation>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se mostrará cuando se abra la solicitud. Nota: El mensaje no se enviará con el pago a través de la red de Qtum.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2076,8 +2188,13 @@ Tarifa de copia</translation>
         <translation>Solicitud de pago caducada.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Particl address</source>
         <translation>Peligro: Dirección de Particl inválida</translation>
+=======
+        <source>Warning: Invalid Qtum address</source>
+        <translation>Peligro: Dirección de Qtum inválida</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2115,8 +2232,13 @@ Tarifa de copia</translation>
         <translation>Seleccionar dirección usada anteriormente</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address to send the payment to</source>
         <translation>Dirección Particl a enviar el pago</translation>
+=======
+        <source>The Qtum address to send the payment to</source>
+        <translation>Dirección Qtum a enviar el pago</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Alt+A</source>
@@ -2185,8 +2307,13 @@ Tarifa de copia</translation>
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address to sign the message with</source>
         <translation>Dirección Particl con la que firmar el mensaje</translation>
+=======
+        <source>The Qtum address to sign the message with</source>
+        <translation>Dirección Qtum con la que firmar el mensaje</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2217,7 +2344,11 @@ Tarifa de copia</translation>
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -2237,12 +2368,21 @@ Tarifa de copia</translation>
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address the message was signed with</source>
         <translation>La dirección Particl con la que se firmó el mensaje</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
         <translation>Verifica el mensaje para asegurar que fue firmado con la dirección de Particl especificada.</translation>
+=======
+        <source>The Qtum address the message was signed with</source>
+        <translation>La dirección Qtum con la que se firmó el mensaje</translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <translation>Verifica el mensaje para asegurar que fue firmado con la dirección de Qtum especificada.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2821,7 +2961,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribuido bajo la licencia de software MIT, vea el archivo adjunto %s o %s</translation>

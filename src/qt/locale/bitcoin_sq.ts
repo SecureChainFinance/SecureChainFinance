@@ -66,6 +66,7 @@
         <translation>Duke marr adresen</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Këto janë Particl adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
@@ -73,6 +74,15 @@
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Këto janë adresat tuaja të Particl për të marrë pagesa. Përdorni butonin 'Krijo adresë të re marrëse' në skedën e marrjes për të krijuar adresa të reja. Nënshkrimi është i mundur vetëm me adresa të tipit 'trashëgimi'.</translation>
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Këto janë Qtum adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation>Këto janë adresat tuaja të Qtum për të marrë pagesa. Përdorni butonin 'Krijo adresë të re marrëse' në skedën e marrjes për të krijuar adresa të reja. Nënshkrimi është i mundur vetëm me adresa të tipit 'trashëgimi'.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -225,7 +235,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Duke u sinkronizuar me rrjetin...</translation>
@@ -424,8 +434,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Miresevini</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Error</source>
@@ -813,7 +828,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Fonde te pamjaftueshme</translation>

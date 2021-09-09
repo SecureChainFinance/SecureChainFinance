@@ -62,7 +62,11 @@
         <translation>የመቀበያ አድራሻዎች</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>እነኚ የቢትኮይን ክፍያ የመላኪያ አድራሻዎችዎ ናቸው:: ገንዘብ/ኮይኖች ከመላክዎ በፊት መጠኑን እና የመቀበያ አድራሻውን ሁልጊዜ ያረጋግጡ::</translation>
     </message>
     <message>
@@ -156,7 +160,11 @@
         <translation>የቢትኮይን ቦርሳዎን ማመስጠር ያረጋግጡ</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>ማስጠንቀቂያ: የቢትኮይን ቦርሳዎን አመስጥረው የይለፍ-ሐረግዎን ካጡት&lt;b&gt;ቢትኮይኖቾን በሙሉ ያጣሉ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -216,7 +224,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>ምልክትና መልእክት...</translation>
@@ -465,7 +473,11 @@
         <translation>እንኳን  ወድ %1 በደህና መጣህ።</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
+=======
+        <source>Qtum</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>ቢትኮይን</translation>
     </message>
     <message>
@@ -714,6 +726,6 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     </context>
 </TS>

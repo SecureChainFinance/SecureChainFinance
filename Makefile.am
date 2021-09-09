@@ -30,7 +30,11 @@ BITCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win64-setup$(EXEEXT)
 empty :=
 space := $(empty) $(empty)
 
+<<<<<<< HEAD
 OSX_APP=Particl-Qt.app
+=======
+OSX_APP=Qtum-Qt.app
+>>>>>>> project-a/time/qtumcore0.21
 OSX_VOLNAME = $(subst $(space),-,$(PACKAGE_NAME))
 OSX_DMG = $(OSX_VOLNAME).dmg
 OSX_BACKGROUND_SVG=background.svg
@@ -100,7 +104,11 @@ $(OSX_APP)/Contents/Resources/particl.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
+<<<<<<< HEAD
 $(OSX_APP)/Contents/MacOS/Particl-Qt: all-recursive
+=======
+$(OSX_APP)/Contents/MacOS/Qtum-Qt: all-recursive
+>>>>>>> project-a/time/qtumcore0.21
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $(BITCOIN_QT_BIN) $@
 
@@ -109,8 +117,13 @@ $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings:
 	echo '{	CFBundleDisplayName = "$(PACKAGE_NAME)"; CFBundleName = "$(PACKAGE_NAME)"; }' > $@
 
 OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
+<<<<<<< HEAD
   $(OSX_APP)/Contents/Resources/particl.icns $(OSX_APP)/Contents/Info.plist \
   $(OSX_APP)/Contents/MacOS/Particl-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
+=======
+  $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/MacOS/Qtum-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
+>>>>>>> project-a/time/qtumcore0.21
 
 osx_volname:
 	echo $(OSX_VOLNAME) >$@
@@ -135,7 +148,11 @@ $(APP_DIST_DIR)/Applications:
 	@rm -f $@
 	@cd $(@D); $(LN_S) /Applications $(@F)
 
+<<<<<<< HEAD
 $(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Particl-Qt
+=======
+$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Qtum-Qt
+>>>>>>> project-a/time/qtumcore0.21
 
 $(OSX_DMG): $(APP_DIST_EXTRAS)
 	$(GENISOIMAGE) -no-cache-inodes -D -l -probe -V "$(OSX_VOLNAME)" -no-pad -r -dir-mode 0755 -apple -o $@ dist
@@ -150,7 +167,11 @@ $(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE): $(OSX_BACKGROUND_IMAGE_DPIF
 $(APP_DIST_DIR)/.DS_Store: $(OSX_DSSTORE_GEN)
 	$(PYTHON) $< "$@" "$(OSX_VOLNAME)"
 
+<<<<<<< HEAD
 $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Particl-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
+=======
+$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Qtum-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
+>>>>>>> project-a/time/qtumcore0.21
 	INSTALLNAMETOOL=$(INSTALLNAMETOOL)  OTOOL=$(OTOOL) STRIP=$(STRIP) $(PYTHON) $(OSX_DEPLOY_SCRIPT) $(OSX_APP) -translations-dir=$(QT_TRANSLATION_DIR) -add-qt-tr $(OSX_QT_TRANSLATIONS) -verbose 2
 
 deploydir: $(APP_DIST_EXTRAS)

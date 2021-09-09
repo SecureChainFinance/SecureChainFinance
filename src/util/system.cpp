@@ -14,6 +14,8 @@
 #include <util/strencodings.h>
 #include <util/string.h>
 #include <util/translation.h>
+#include <regex>
+#include <iomanip>
 
 
 #if (defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
@@ -72,7 +74,11 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
+<<<<<<< HEAD
 const char * const BITCOIN_CONF_FILENAME = "particl.conf";
+=======
+const char * const BITCOIN_CONF_FILENAME = "qtum.conf";
+>>>>>>> project-a/time/qtumcore0.21
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 bool fParticlMode = true;
@@ -87,7 +93,7 @@ static Mutex cs_dir_locks;
  */
 static std::map<std::string, std::unique_ptr<fsbridge::FileLock>> dir_locks GUARDED_BY(cs_dir_locks);
 
-bool LockDirectory(const fs::path& directory, const std::string lockfile_name, bool probe_only)
+bool LockDirectory(const fs::path& directory, const std::string lockfile_name, bool probe_only, bool try_lock)
 {
     LOCK(cs_dir_locks);
     fs::path pathLockFile = directory / lockfile_name;
@@ -101,7 +107,7 @@ bool LockDirectory(const fs::path& directory, const std::string lockfile_name, b
     FILE* file = fsbridge::fopen(pathLockFile, "a");
     if (file) fclose(file);
     auto lock = MakeUnique<fsbridge::FileLock>(pathLockFile);
-    if (!lock->TryLock()) {
+    if (try_lock && !lock->TryLock()) {
         return error("Error while attempting to lock directory %s: %s", directory.string(), lock->GetReason());
     }
     if (!probe_only) {
@@ -666,12 +672,21 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
+<<<<<<< HEAD
     // Windows: C:\Users\Username\AppData\Roaming\Particl
     // macOS: ~/Library/Application Support/Particl
     // Unix-like: ~/.particl
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Particl";
+=======
+    // Windows: C:\Users\Username\AppData\Roaming\Qtum
+    // macOS: ~/Library/Application Support/Qtum
+    // Unix-like: ~/.qtum
+#ifdef WIN32
+    // Windows
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Qtum";
+>>>>>>> project-a/time/qtumcore0.21
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -681,10 +696,17 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // macOS
+<<<<<<< HEAD
     return pathRet / "Library/Application Support/Particl";
 #else
     // Unix-like
     return pathRet / ".particl";
+=======
+    return pathRet / "Library/Application Support/Qtum";
+#else
+    // Unix-like
+    return pathRet / ".qtum";
+>>>>>>> project-a/time/qtumcore0.21
 #endif
 #endif
 }
@@ -1021,6 +1043,39 @@ void ArgsManager::LogArgs() const
     logArgsPrefix("Command-line arg:", "", m_settings.command_line_options);
 }
 
+std::map<std::string, std::vector<std::string>> ArgsManager::getArgsList(const std::vector<std::string>& paramListType) const
+{
+    // Get argument list
+    std::map<std::string, bool> args;
+    for (const auto& arg : m_settings.forced_settings) {
+        args[arg.first] = true;
+    }
+    for (const auto& arg : m_settings.command_line_options) {
+        args[arg.first] = true;
+    }
+    for (const auto& arg : m_settings.ro_config) {
+        for(const auto& confArg : arg.second)
+            args[confArg.first] = true;
+    }
+
+    // Fill argument list with values
+    std::map<std::string, std::vector<std::string>> ret;
+    for (const auto& arg : args) {
+        std::string paramName = '-' + arg.first;
+        std::vector<std::string> paramValue;
+        bool isList = std::find(std::begin(paramListType), std::end(paramListType), paramName) != std::end(paramListType);
+        if(isList) {
+            paramValue = GetArgs(paramName);
+        }
+        else {
+            paramValue.push_back(GetArg(paramName, ""));
+        }
+        ret[arg.first] = paramValue;
+    }
+
+    return ret;
+}
+
 bool RenameOver(fs::path src, fs::path dest)
 {
 #ifdef WIN32
@@ -1305,11 +1360,24 @@ std::string CopyrightHolders(const std::string& strPrefix)
     std::string strCopyrightHolders = strPrefix + sRange + copyright_devs;
 
     // Make sure Bitcoin Core copyright is not removed by accident
+<<<<<<< HEAD
     if (copyright_devs.find("Bitcoin Core") == std::string::npos) {
         sRange = strprintf(" %i-%i ", BTC_START_YEAR, COPYRIGHT_YEAR);
         strCopyrightHolders += "\n" + strPrefix + sRange + "The Bitcoin Core developers";
+=======
+    if (copyright_devs.find("Qtum Core") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The Qtum Core Developers";
+>>>>>>> project-a/time/qtumcore0.21
     }
     return strCopyrightHolders;
+}
+
+bool CheckHex(const std::string& str) {
+    size_t data=0;
+    if(str.size() > 2 && (str.compare(0, 2, "0x") == 0 || str.compare(0, 2, "0X") == 0)){
+        data=2;
+    }
+    return str.size() > data && str.find_first_not_of("0123456789abcdefABCDEF", data) == std::string::npos;
 }
 
 // Obtain the application startup time (used for uptime calculation)
@@ -1335,6 +1403,28 @@ void ScheduleBatchPriority()
         LogPrintf("Failed to pthread_setschedparam: %s\n", strerror(rc));
     }
 #endif
+}
+
+std::string toHexString(int64_t intValue) {
+    //Store big endian representation in a vector
+    uint64_t num = (uint64_t)intValue;
+    std::vector<unsigned char> bigEndian;
+    for(int i=sizeof(num) -1; i>=0; i--){
+       bigEndian.push_back( (num>>(8*i)) & 0xff );
+    }
+
+    //Convert the vector into hex string
+    return "0x" + HexStr(MakeUCharSpan(bigEndian));
+}
+
+void ReplaceInt(const int64_t& number, const std::string& key, std::string& str)
+{
+    // Convert the number into hex string
+    std::string num_hex = toHexString(number);
+
+    // Search for key in str and replace it with the hex string
+    std::string str_replaced = std::regex_replace(str, std::regex(key), num_hex);
+    str = str_replaced;
 }
 
 namespace util {

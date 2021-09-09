@@ -51,7 +51,11 @@
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
+<<<<<<< HEAD
         <translation>Particlleri alacağınız adresi seçin</translation>
+=======
+        <translation>Qtumleri alacağınız adresi seçin</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -66,6 +70,7 @@
         <translation>Alıcı adresler</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Bunlar Particlleriniz için gönderici adreslerinizdir.
 Gönderim yapmadan önce her zaman tutarı ve alıcı adresi kontrol ediniz.</translation>
@@ -74,6 +79,16 @@ Gönderim yapmadan önce her zaman tutarı ve alıcı adresi kontrol ediniz.</tr
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Bunlar ödeme almak için kullanacağınız particl adreslerinizdir. Yeni adres oluşturmak için ödeme alma sekmesindeki 'Yeni alıcı adresi oluşturun' kısmına tıklayın.
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar Qtumleriniz için gönderici adreslerinizdir.
+Gönderim yapmadan önce her zaman tutarı ve alıcı adresi kontrol ediniz.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation>Bunlar ödeme almak için kullanacağınız qtum adreslerinizdir. Yeni adres oluşturmak için ödeme alma sekmesindeki 'Yeni alıcı adresi oluşturun' kısmına tıklayın.
+>>>>>>> project-a/time/qtumcore0.21
 İmzalama sadece 'legacy' tipindeki adreslerle mümkündür.</translation>
     </message>
     <message>
@@ -172,8 +187,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Cüzdan şifrelemeyi onayla</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
         <translation>Uyarı: Cüzdanınızı şifreler ve parolanızı unutursanız &lt;b&gt;TÜM PARTICLLERINIZI KAYBEDERSİNİZ&lt;/b&gt;!</translation>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+        <translation>Uyarı: Cüzdanınızı şifreler ve parolanızı unutursanız &lt;b&gt;TÜM QTUMLERINIZI KAYBEDERSİNİZ&lt;/b&gt;!</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -192,8 +212,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Cüzdanınızın eski ve yeni parolasını giriniz.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
         <translation>Cüzdanınızı şifrelemenin bilgisayarınıza bulaşan kötü amaçlı yazılımlar tarafından particllerinizin çalınmasına karşı tamamen koruyamayacağını unutmayın.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <translation>Cüzdanınızı şifrelemenin bilgisayarınıza bulaşan kötü amaçlı yazılımlar tarafından qtumlerinizin çalınmasına karşı tamamen koruyamayacağını unutmayın.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -256,7 +281,7 @@ Cüzdan kilidini aç.</translation>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Mesajı imzala ...</translation>
@@ -366,8 +391,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Proxy &lt;b&gt;etkinleştirildi&lt;/b&gt;: %1 </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
         <translation>Bir Particl adresine Particl yolla</translation>
+=======
+        <source>Send coins to a Qtum address</source>
+        <translation>Bir Qtum adresine Qtum yolla</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -402,12 +432,21 @@ Cüzdan kilidini aç.</translation>
         <translation>Cüzdanınıza ait özel anahtarları şifreleyin</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Particl adreslerine sahip olduğunuzu kanıtlamak için mesajlarınızı imzalayın</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Belirtilen Particl adresleriyle imzalandıklarından emin olmak için mesajları doğrulayın</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Qtum adreslerine sahip olduğunuzu kanıtlamak için mesajlarınızı imzalayın</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Belirtilen Qtum adresleriyle imzalandıklarından emin olmak için mesajları doğrulayın</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -426,8 +465,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Araç çubuğu sekmeleri</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and particl: URIs)</source>
         <translation>Ödeme isteyin (QR kodları ve particl: URI'ler üretir)</translation>
+=======
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <translation>Ödeme isteyin (QR kodları ve qtum: URI'ler üretir)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -442,8 +486,13 @@ Cüzdan kilidini aç.</translation>
         <translation>&amp;Komut satırı seçenekleri</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Particl network</source>
         <translation><numerusform>Particl ağına %n etkin bağlantı</numerusform><numerusform>Particl ağına %n etkin bağlantı</numerusform></translation>
+=======
+        <source>%n active connection(s) to Qtum network</source>
+        <translation><numerusform>Qtum ağına %n etkin bağlantı</numerusform><numerusform>Qtum ağına %n etkin bağlantı</numerusform></translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -486,16 +535,26 @@ Cüzdan kilidini aç.</translation>
         <translation>PSBT'yi dosyadan yükle ...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
         <translation>Kısmen İmzalanmış Particl İşlemini Yükle </translation>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+        <translation>Kısmen İmzalanmış Qtum İşlemini Yükle </translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Load PSBT from clipboard...</source>
         <translation>PBT'yi panadon yükle ...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction from clipboard</source>
         <translation>Kısmen İmzalanmış Particl işlemini panodan yükle</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <translation>Kısmen İmzalanmış Qtum işlemini panodan yükle</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Node window</source>
@@ -514,8 +573,13 @@ Cüzdan kilidini aç.</translation>
         <translation>&amp; Adresler alınıyor</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a particl: URI</source>
         <translation>Particl’i aç.</translation>
+=======
+        <source>Open a qtum: URI</source>
+        <translation>Qtum’i aç.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Open Wallet</source>
@@ -892,8 +956,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Gönderme adresini  düzenleyin</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
         <translation>Girilen "%1" adresi geçerli bir Particl adresi değildir.</translation>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <translation>Girilen "%1" adresi geçerli bir Qtum adresi değildir.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     </context>
 <context>
@@ -937,8 +1006,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Özel bir veri klasörü kullan:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -956,8 +1030,13 @@ Cüzdan kilidini aç.</translation>
 <context>
     <name>ModalOverlay</name>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</source>
         <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız particl ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız qtum ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Unknown...</source>
@@ -1158,8 +1237,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Ödeme isteği hatası</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'particl://' is not a valid URI. Use 'particl:' instead.</source>
         <translation>'particl://' geçerli bir URI değil. Onun yerine 'particl:' kullanın.</translation>
+=======
+        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
+        <translation>'qtum://' geçerli bir URI değil. Onun yerine 'qtum:' kullanın.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     </context>
 <context>
@@ -1180,8 +1264,13 @@ Cüzdan kilidini aç.</translation>
         <translation>Mitar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
         <translation>Bir particl adresi giriniz (örneğin %1)</translation>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+        <translation>Bir qtum adresi giriniz (örneğin %1)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>%1 d</source>
@@ -1911,7 +2000,7 @@ Cüzdan kilidini aç.</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
         <translation>Lütfen bilgisayarınızın tarih ve saatinin doğruluğunu kontrol edin. Hata varsa %s doğru çalışmayacaktır.</translation>

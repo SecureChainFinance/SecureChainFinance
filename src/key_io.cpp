@@ -514,6 +514,7 @@ bool CBitcoinAddress::Set(const CTxDestination& dest, bool fBech32)
     return boost::apply_visitor(CBitcoinAddressVisitor(this, fBech32), dest);
 }
 
+<<<<<<< HEAD
 bool CBitcoinAddress::IsValidStealthAddress() const
 {
     return IsValidStealthAddress(Params());
@@ -852,3 +853,48 @@ std::string CExtKey58::ToStringVersion(CChainParams::Base58Type prefix)
     vchVersion = Params().Base58Prefix(prefix);
     return ToString();
 };
+=======
+bool IsValidContractSenderAddressString(const std::string& str)
+{
+    return IsValidContractSenderAddress(DecodeDestination(str));
+}
+
+bool DecodeIndexKey(const std::string &str, uint256 &hashBytes, int &type)
+{
+    CTxDestination dest = DecodeDestination(str);
+    if (IsValidDestination(dest))
+    {
+        const PKHash *keyID = boost::get<PKHash>(&dest);
+        if(keyID)
+        {
+            memcpy(&hashBytes, keyID, 20);
+            type = 1;
+            return true;
+        }
+
+        const ScriptHash *scriptID = boost::get<ScriptHash>(&dest);
+        if(scriptID)
+        {
+            memcpy(&hashBytes, scriptID, 20);
+            type = 2;
+            return true;
+        }
+
+        const WitnessV0ScriptHash *witnessV0ScriptID = boost::get<WitnessV0ScriptHash>(&dest);
+        if (witnessV0ScriptID) {
+            memcpy(&hashBytes, witnessV0ScriptID, 32);
+            type = 3;
+            return true;
+        }
+
+        const WitnessV0KeyHash *witnessV0KeyID = boost::get<WitnessV0KeyHash>(&dest);
+        if (witnessV0KeyID) {
+            memcpy(&hashBytes, witnessV0KeyID, 20);
+            type = 4;
+            return true;
+        }
+    }
+
+    return false;
+}
+>>>>>>> project-a/time/qtumcore0.21

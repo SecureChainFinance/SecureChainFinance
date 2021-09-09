@@ -34,7 +34,11 @@
         <translation>&amp;Dele</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -116,7 +120,11 @@
         <translation>Confirma cifrationem cassidilis</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS BITOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -168,7 +176,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
@@ -230,8 +238,13 @@
         <translation>Recreans indicem frustorum in disco...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
         <translation>Mitte nummos ad inscriptionem Particl</translation>
+=======
+        <source>Send coins to a Qtum address</source>
+        <translation>Mitte nummos ad inscriptionem Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -266,12 +279,21 @@
         <translation>Cifra claves privatas quae cassidili tui sunt</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Signa nuntios cum tuis inscriptionibus Particl ut demonstres te eas possidere</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Particl</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus Qtum ut demonstres te eas possidere</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +440,13 @@
         <translation>Muta inscriptionem mittendi</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
         <translation>Inscriptio inserta "%1" non valida inscriptio Particl est.</translation>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <translation>Inscriptio inserta "%1" non valida inscriptio Qtum est.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -447,8 +474,13 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Error</source>
@@ -499,8 +531,13 @@
         <translation>Cassidile</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Aperi per se portam clientis Particl in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis Qtum in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -582,8 +619,13 @@
         <translation>Schema</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
         <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Particl postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Qtum postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Immature:</source>
@@ -600,8 +642,13 @@
 <context>
     <name>PaymentServer</name>
     <message>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
         <translation>Particl incipere non potest: cliccare-ad-pensandum handler</translation>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+        <translation>Qtum incipere non potest: cliccare-ad-pensandum handler</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI handling</source>
@@ -901,8 +948,13 @@
         <translation>Copia signationem in latibulum systematis</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
         <translation>Signa nuntium ut demonstres hanc inscriptionem Particl a te possessa esse</translation>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem Qtum a te possessa esse</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -921,8 +973,13 @@
         <translation>&amp;Verifica Nuntium</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
         <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Particl</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1336,7 +1393,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>Hoc est prae-dimittum experimentala aedes - utere eo periculo tuo proprio - nolite utere fodendo vel applicationibus mercatoriis</translation>

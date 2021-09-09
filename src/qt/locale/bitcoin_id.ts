@@ -66,6 +66,7 @@
         <translation>Alamat-alamat penerima</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Berikut ialah alamat-alamat Particl Anda yang digunakan untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
     </message>
@@ -73,6 +74,15 @@
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Ini adalah alamat-alamat particlmu untuk menerima pembayaran. Gunakan tombol 'Buat alamat penerima baru' di atas tab menerima untuk membuat alamat baru. Tanda tangan hanya bisa digunakan dengan tipe alamat 'Lama'</translation>
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Berikut ialah alamat-alamat Qtum Anda yang digunakan untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation>Ini adalah alamat-alamat qtummu untuk menerima pembayaran. Gunakan tombol 'Buat alamat penerima baru' di atas tab menerima untuk membuat alamat baru. Tanda tangan hanya bisa digunakan dengan tipe alamat 'Lama'</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -169,8 +179,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Konfirmasi pengenkripsian dompet</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
         <translation>Peringatan: Jika Anda mengenkripsi dompet Anda dan lupa kata sandi Anda, Anda akan &lt;b&gt;KEHILANGAN SEMUA PARTICL ANDA&lt;/b&gt;!</translation>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+        <translation>Peringatan: Jika Anda mengenkripsi dompet Anda dan lupa kata sandi Anda, Anda akan &lt;b&gt;KEHILANGAN SEMUA QTUM ANDA&lt;/b&gt;!</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -189,8 +204,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Masukan passphrase lama dan passphrase baru ke dompet</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
         <translation>Mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi particl Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <translation>Mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi qtum Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -253,7 +273,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Pesan &amp;penanda...</translation>
@@ -363,8 +383,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Proxy di &lt;b&gt;aktifkan&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
         <translation>Kirim koin ke alamat Particl</translation>
+=======
+        <source>Send coins to a Qtum address</source>
+        <translation>Kirim koin ke alamat Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -399,12 +424,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Tanda tangani sebuah pesan menggunakan alamat Particl Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Particl tertentu</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat Qtum Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Qtum tertentu</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -423,8 +457,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Baris tab</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and particl: URIs)</source>
         <translation>Permintaan pembayaran (membuat kode QR dan particl: URIs)</translation>
+=======
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan qtum: URIs)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -439,8 +478,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;pilihan Command-line</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Particl network</source>
         <translation><numerusform>%n koneksi aktif ke jaringan Particl</numerusform></translation>
+=======
+        <source>%n active connection(s) to Qtum network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan Qtum</numerusform></translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -487,16 +531,26 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;Muat PSBT dari file...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
         <translation>Muat transaksi Particl yang ditandatangani seperapat</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+        <translation>Muat transaksi Qtum yang ditandatangani seperapat</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Load PSBT from clipboard...</source>
         <translation>Muat PSBT dari clipboard...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction from clipboard</source>
         <translation>Muat transaksi Particl yang ditandatangani seperapat dari clipboard</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <translation>Muat transaksi Qtum yang ditandatangani seperapat dari clipboard</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Node window</source>
@@ -515,8 +569,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Address &amp;Penerima</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a particl: URI</source>
         <translation>Buka URI particl:</translation>
+=======
+        <source>Open a qtum: URI</source>
+        <translation>Buka URI qtum:</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Open Wallet</source>
@@ -543,8 +602,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Tutup semua dompet</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Particl command-line options</source>
         <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Particl yang memungkinkan</translation>
+=======
+        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Qtum yang memungkinkan</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -923,8 +987,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Ubah alamat pengirim</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
         <translation>Alamat yang dimasukkan "%1" bukanlah alamat Particl yang valid.</translation>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <translation>Alamat yang dimasukkan "%1" bukanlah alamat Qtum yang valid.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1020,8 +1089,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Gunakan direktori pilihan Anda:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Discard blocks after verification, except most recent %1 GB (prune)</source>
@@ -1036,8 +1110,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>%1 GB data akan disimpan di direktori ini.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Particl block chain.</source>
         <translation>%1 akan mengunduh dan menyimpan salinan Particl block chain.</translation>
+=======
+        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <translation>%1 akan mengunduh dan menyimpan salinan Qtum block chain.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1071,12 +1150,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Formulir</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</source>
         <translation>Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Particl, seperti rincian berikut.</translation>
     </message>
     <message>
         <source>Attempting to spend particl that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Usaha untuk menggunakan particl yang dipengaruhi oleh transaksi yang belum terlihat tidak akan diterima oleh jaringan.</translation>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation>Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Qtum, seperti rincian berikut.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Usaha untuk menggunakan qtum yang dipengaruhi oleh transaksi yang belum terlihat tidak akan diterima oleh jaringan.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1126,8 +1214,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open particl URI</source>
         <translation>Buka URI particl:</translation>
+=======
+        <source>Open qtum URI</source>
+        <translation>Buka URI qtum:</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI:</source>
@@ -1268,8 +1361,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Otomatis membuka port client Particl di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client Qtum di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1284,8 +1382,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Terima koneksi-koneksi masuk</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a SOCKS5 proxy.</source>
         <translation>Hubungkan ke jaringan Particl melalui SOCKS5 proxy.</translation>
+=======
+        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan Qtum melalui SOCKS5 proxy.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1360,8 +1463,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Ingin menunjukkan cara pengaturan koin atau tidak.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation>Hubungkan kepada Particl network menggunakan proxy SOCKS5 yang terpisah untuk servis Tor onion</translation>
+=======
+        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation>Hubungkan kepada Qtum network menggunakan proxy SOCKS5 yang terpisah untuk servis Tor onion</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1435,8 +1543,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Formulir</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
         <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Particl ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Qtum ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1633,16 +1746,26 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Terjadi kesalahan pada permintaan pembayaran</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
         <translation>Tidak bisa memulai particl: handler click-to-pay</translation>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+        <translation>Tidak bisa memulai qtum: handler click-to-pay</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI handling</source>
         <translation>Pengelolaan URI</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'particl://' is not a valid URI. Use 'particl:' instead.</source>
         <translation>'particl://' bukanlah alamat URI yang valid. Silakan gunakan 'particl:'.</translation>
+=======
+        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
+        <translation>'qtum://' bukanlah alamat URI yang valid. Silakan gunakan 'qtum:'.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1661,8 +1784,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Alamat pembayaran tidak valid %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</source>
         <translation>URI tidak bisa dimengerti! Hal ini bisa disebabkan karena alamat Particl yang tidak sah atau parameter URI yang tidak tepat.</translation>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <translation>URI tidak bisa dimengerti! Hal ini bisa disebabkan karena alamat Qtum yang tidak sah atau parameter URI yang tidak tepat.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1703,8 +1831,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Nilai</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
         <translation>Masukkan alamat Particl (contoh %1)</translation>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+        <translation>Masukkan alamat Qtum (contoh %1)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>%1 d</source>
@@ -2162,8 +2295,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;Pesan:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</source>
         <translation>Pesan opsional untuk dilampirkan ke permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Particl.</translation>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <translation>Pesan opsional untuk dilampirkan ke permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Qtum.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2447,8 +2585,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Sembunyikan pengaturan biaya transaksi</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for particl transactions than the network can process.</source>
         <translation>Ketika volume transaksi lebih sedikit daripada ruang di blok, penambang serta simpul yang menyiarkanikan dapat memberlakukan biaya minimum. Anda boleh hanya membayar biaya minimum, tetapi perlu diketahui bahwa ini dapat menghasilkan transaksi yang tidak pernah dikonfirmasi setelah ada lebih banyak permintaan untuk transaksi particl daripada yang dapat diproses jaringan.</translation>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <translation>Ketika volume transaksi lebih sedikit daripada ruang di blok, penambang serta simpul yang menyiarkanikan dapat memberlakukan biaya minimum. Anda boleh hanya membayar biaya minimum, tetapi perlu diketahui bahwa ini dapat menghasilkan transaksi yang tidak pernah dikonfirmasi setelah ada lebih banyak permintaan untuk transaksi qtum daripada yang dapat diproses jaringan.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2519,8 +2662,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>bu&amp;at Tidak ditandai</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Creates a Partially Signed Particl Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>Membuat sebagian tertanda transaksi particl (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
+=======
+        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation>Membuat sebagian tertanda transaksi qtum (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2635,8 +2783,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation><numerusform>Diperkirakan akan memulai konfirmasi dalam %n blok.</numerusform></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Particl address</source>
         <translation>Peringatan: Alamat Particl tidak valid</translation>
+=======
+        <source>Warning: Invalid Qtum address</source>
+        <translation>Peringatan: Alamat Qtum tidak valid</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2674,8 +2827,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Pilih alamat yang telah digunakan sebelumnya</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address to send the payment to</source>
         <translation>Alamat Particl untuk mengirim pembayaran</translation>
+=======
+        <source>The Qtum address to send the payment to</source>
+        <translation>Alamat Qtum untuk mengirim pembayaran</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Alt+A</source>
@@ -2698,8 +2856,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Jumlah yang ingin dikirim dalam unit yang dipilih</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less particl than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Biaya akan diambil dari jumlah yang dikirim. Penerima akan menerima particl lebih sedikit daripada yang di masukkan di bidang jumlah. Jika ada beberapa penerima, biaya dibagi rata.</translation>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Biaya akan diambil dari jumlah yang dikirim. Penerima akan menerima qtum lebih sedikit daripada yang di masukkan di bidang jumlah. Jika ada beberapa penerima, biaya dibagi rata.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2726,8 +2889,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Masukkan label untuk alamat ini untuk dimasukan dalam daftar alamat yang pernah digunakan</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>A message that was attached to the particl: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Particl network.</source>
         <translation>Pesan yang dilampirkan ke particl: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Particl.</translation>
+=======
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <translation>Pesan yang dilampirkan ke qtum: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Qtum.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Pay To:</source>
@@ -2756,12 +2924,21 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>&amp;Tandakan Pesan</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your addresses to prove you can receive particl sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima particl yang dikirimkan kepada mereka. Berhati-hatilah untuk tidak menandatangani apa pun yang samar-samar atau acak, karena serangan phishing mungkin mencoba menipu Anda untuk menandatangani identitas Anda kepada mereka. Hanya tandatangani pernyataan terperinci yang Anda setujui.</translation>
     </message>
     <message>
         <source>The Particl address to sign the message with</source>
         <translation>Alamat Particl untuk menandatangani pesan</translation>
+=======
+        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima qtum yang dikirimkan kepada mereka. Berhati-hatilah untuk tidak menandatangani apa pun yang samar-samar atau acak, karena serangan phishing mungkin mencoba menipu Anda untuk menandatangani identitas Anda kepada mereka. Hanya tandatangani pernyataan terperinci yang Anda setujui.</translation>
+    </message>
+    <message>
+        <source>The Qtum address to sign the message with</source>
+        <translation>Alamat Qtum untuk menandatangani pesan</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2792,8 +2969,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
         <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Particl ini</translation>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Qtum ini</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2816,8 +2998,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation>Masukkan alamat penerima, pesan (pastikan Anda menyalin persis jeda baris, spasi, tab, dll) dan tanda tangan di bawah untuk memverifikasi pesan. Berhati-hatilah untuk tidak memberi informasi lebih ke tanda tangan daripada apa yang ada dalam pesan yang ditandatangani itu sendiri, untuk menghindari dikelabui oleh serangan man-in-the-middle. Perhatikan bahwa ini hanya membuktikan pihak penandatangan menerima dengan alamat, tapi tidak dapat membuktikan pengiriman dari transaksi apa pun!</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address the message was signed with</source>
         <translation>Alamat Particl yang menandatangani pesan</translation>
+=======
+        <source>The Qtum address the message was signed with</source>
+        <translation>Alamat Qtum yang menandatangani pesan</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2828,8 +3015,13 @@ Catatan: Karena biaya dihitung berdasarkan per byte, biaya "100 satoshi per kB" 
         <translation> Tanda tangan diberikan saat pesan telah ditandatangani</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
         <translation>Verifikasi pesan untuk memastikannya ditandatangani dengan alamat Particl tersebut</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <translation>Verifikasi pesan untuk memastikannya ditandatangani dengan alamat Qtum tersebut</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3511,7 +3703,7 @@ Pergi ke File &gt; Open Wallet untuk memuat dompet.
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Didistribusikan di bawah lisensi perangkat lunak MIT, lihat berkas terlampir %s atau %s</translation>

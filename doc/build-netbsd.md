@@ -2,7 +2,11 @@ NetBSD build guide
 ======================
 (updated for NetBSD 8.0)
 
+<<<<<<< HEAD
 This guide describes how to build particld and command-line utilities on NetBSD.
+=======
+This guide describes how to build qtumd and command-line utilities on NetBSD.
+>>>>>>> project-a/time/qtumcore0.21
 
 This guide does not contain instructions for building the GUI.
 
@@ -21,8 +25,13 @@ libevent
 libtool
 pkg-config
 python37
+gmp
 
+<<<<<<< HEAD
 git clone https://github.com/particl/particl-core.git
+=======
+git clone https://github.com/qtumproject/qtum --recursive
+>>>>>>> project-a/time/qtumcore0.21
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
@@ -47,7 +56,11 @@ from the root of the repository. Then set `BDB_PREFIX` for the next section:
 export BDB_PREFIX="$PWD/db4"
 ```
 
+<<<<<<< HEAD
 ### Building Particl Core
+=======
+### Building Qtum Core
+>>>>>>> project-a/time/qtumcore0.21
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

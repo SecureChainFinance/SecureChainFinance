@@ -22,7 +22,11 @@
 			<integer>370</integer>
 			<integer>156</integer>
 		</array>
+<<<<<<< HEAD
 		<key>Particl-Qt.app</key>
+=======
+		<key>Qtum-Qt.app</key>
+>>>>>>> project-a/time/qtumcore0.21
 		<array>
 			<integer>128</integer>
 			<integer>156</integer>

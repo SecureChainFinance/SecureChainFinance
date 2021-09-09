@@ -27,10 +27,19 @@ class BitcoinAddressCheckValidator : public QValidator
     Q_OBJECT
 
 public:
+<<<<<<< HEAD
     explicit BitcoinAddressCheckValidator(QObject *parent, bool allow_stakeonly=false);
 
     State validate(QString &input, int &pos) const override;
     bool m_allow_stakeonly;
+=======
+    explicit BitcoinAddressCheckValidator(QObject *parent, bool senderAddress = false);
+
+    State validate(QString &input, int &pos) const override;
+
+private:
+    bool m_senderAddress;
+>>>>>>> project-a/time/qtumcore0.21
 };
 
 #endif // BITCOIN_QT_BITCOINADDRESSVALIDATOR_H

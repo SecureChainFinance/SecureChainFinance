@@ -64,7 +64,11 @@ static bool AppInit(int argc, char* argv[])
         if (args.IsArgSet("-version")) {
             strUsage += FormatParagraph(LicenseInfo()) + "\n";
         } else {
+<<<<<<< HEAD
             strUsage += "\nUsage:  particld [options]                     Start " PACKAGE_NAME "\n";
+=======
+            strUsage += "\nUsage:  qtumd [options]                     Start " PACKAGE_NAME "\n";
+>>>>>>> project-a/time/qtumcore0.21
             strUsage += "\n" + args.GetHelpMessage();
         }
 
@@ -108,7 +112,11 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
+<<<<<<< HEAD
                 return InitError(Untranslated(strprintf("Command line contains unexpected token '%s', see particld -h for a list of options.\n", argv[i])));
+=======
+                return InitError(Untranslated(strprintf("Command line contains unexpected token '%s', see qtumd -h for a list of options.\n", argv[i])));
+>>>>>>> project-a/time/qtumcore0.21
             }
         }
 

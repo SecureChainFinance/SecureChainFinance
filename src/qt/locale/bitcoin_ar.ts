@@ -66,11 +66,19 @@
         <translation>العنوان الرقمي المُرسَل إليه</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>هذه هي عناوين البيتكوين لإرسال المدفوعات. دائما تحقق من المبلغ وعنوان المستلم قبل الإرسال.</translation>
     </message>
     <message>
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>هذه هي عناوين البيتكوين لإرسال المدفوعات. دائما تحقق من المبلغ وعنوان المستلم قبل الإرسال.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> project-a/time/qtumcore0.21
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>هذه هي عناوين بتكوين الخاصة بك لتلقي المدفوعات. استخدم الزر "إنشاء عنوان استلام جديد" في علامة تبويب الاستلام لإنشاء عناوين جديدة.
 التوقيع ممكن فقط مع عناوين من النوع "قديم".</translation>
@@ -166,7 +174,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>إذا شفرت محفظتك وفقدت كلمة المرور، ستفقد كل ما تملك من البيتكوين.</translation>
     </message>
     <message>
@@ -186,7 +198,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>ادخل كملة المرور القديمة وكلمة المرور الجديدة للمحفظة.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>تذكر أن تشفير محفظتك لا يحمي البيتكوين الخاصة بك بشكل كامل من السرقة من قبل البرامج الخبيثةالتي تصيب حاسوبك</translation>
     </message>
     <message>
@@ -250,7 +266,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>التوقيع و الرسائل</translation>
@@ -360,7 +376,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>%1 اتصال نشط بشبكة البيتكوين</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
+=======
+        <source>Send coins to a Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>ارسل عملات الى عنوان بيتكوين</translation>
     </message>
     <message>
@@ -396,12 +416,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>تشفير المفتاح الخاص بمحفظتك</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>وقَع الرسائل بواسطة ال: Particl الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Particl محدَدة</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: Qtum الخاص بك لإثبات امتلاكك لهم</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Qtum محدَدة</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -420,7 +449,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and particl: URIs)</source>
+=======
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -480,7 +513,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp; تحميل PSBT من ملف ...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>تحميل معاملة بتكوين الموقعة جزئيًا</translation>
     </message>
     <message>
@@ -488,7 +525,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>تحميل PSBT من الحافظة ...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>تحميل معاملة بتكوين الموقعة جزئيًا من الحافظة</translation>
     </message>
     <message>
@@ -508,7 +549,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;عناوين الإستقبال</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a particl: URI</source>
+=======
+        <source>Open a qtum: URI</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>افتح عملة بيتكوين: URI</translation>
     </message>
     <message>
@@ -536,7 +581,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>إغلاق جميع المحافظ ...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Particl command-line options</source>
+=======
+        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
     </message>
     <message>
@@ -913,7 +962,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>تعديل عنوان الارسال</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>العنوان المدخل "%1" ليس عنوان بيت كوين صحيح.</translation>
     </message>
     <message>
@@ -1010,7 +1063,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>استخدام دليل بيانات مخصص:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
+=======
+        <source>Qtum</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -1026,7 +1083,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>سيتم تخزين %1 جيجابايت تقريباً من البيانات في هذا الدليل.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Particl block chain.</source>
+=======
+        <source>%1 will download and store a copy of the Qtum block chain.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>سيقوم %1 بتنزيل نسخة من سلسلة كتل بتكوين وتخزينها.</translation>
     </message>
     <message>
@@ -1053,11 +1114,19 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>نمودج</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</source>
         <translation>قد لا تكون المعاملات الأخيرة مرئية بعد، وبالتالي قد يكون رصيد محفظتك غير صحيح. ستكون هذه المعلومات صحيحة بمجرد الانتهاء من محفظتك مع شبكة البيتكوين، كما هو مفصل أدناه.</translation>
     </message>
     <message>
         <source>Attempting to spend particl that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation>قد لا تكون المعاملات الأخيرة مرئية بعد، وبالتالي قد يكون رصيد محفظتك غير صحيح. ستكون هذه المعلومات صحيحة بمجرد الانتهاء من محفظتك مع شبكة البيتكوين، كما هو مفصل أدناه.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>لن تقبل الشبكة محاولة إنفاق البتكوين المتأثرة بالمعاملات التي لم يتم عرضها بعد.</translation>
     </message>
     <message>
@@ -1104,7 +1173,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open particl URI</source>
+=======
+        <source>Open qtum URI</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>افتح بتكوين URI</translation>
     </message>
     <message>
@@ -1242,7 +1315,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>دفع الفكة غير المؤكدة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>فتح منفذ خادم البتكوين تلقائيا على الموجه. هذا فقط يعمل عندما يكون الموجه الخاص بك يدعم UPnP ومفعل ايضا.</translation>
     </message>
     <message>
@@ -1258,7 +1335,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>السماح بالاتصالات الواردة.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a SOCKS5 proxy.</source>
+=======
+        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>الاتصال بشبكة البتكوين عبر وكيل SOCKS5.</translation>
     </message>
     <message>
@@ -1334,7 +1415,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>ما اذا أردت إظهار ميزات التحكم في العملة أم لا.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a separate SOCKS5 proxy for Tor onion services.</source>
+=======
+        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>اتصل بشبكة بتكوين من خلال وكيل SOCKS5 منفصل لخدمات Tor onion.</translation>
     </message>
     <message>
@@ -1409,7 +1494,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>نمودج</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>قد تكون المعلومات المعروضة قديمة. تتزامن محفظتك تلقائيًا مع شبكة البتكوين بعد إنشاء الاتصال، ولكن هذه العملية لم تكتمل بعد.</translation>
     </message>
     <message>
@@ -1607,7 +1696,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>خطأ في طلب الدفع</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>لا يمكن تشغيل بتكوين: معالج النقر للدفع</translation>
     </message>
     <message>
@@ -1615,8 +1708,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>التعامل مع العنوان</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'particl://' is not a valid URI. Use 'particl:' instead.</source>
         <translation>'particl://' هو ليس عنوان URL صالح. استعمل 'particl:' بدلا من ذلك.</translation>
+=======
+        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
+        <translation>'qtum://' هو ليس عنوان URL صالح. استعمل 'qtum:' بدلا من ذلك.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1635,7 +1733,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>عنوان الدفع غير صالح %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</source>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>لا يمكن تحليل العنوان (URI)! يمكن أن يحدث هذا بسبب عنوان بتكوين غير صالح أو معلمات عنوان (URI) غير صحيحة.</translation>
     </message>
     <message>
@@ -1677,7 +1779,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>مبلغ</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>ادخل عنوان محفطة البتكوين (مثال %1)</translation>
     </message>
     <message>
@@ -2102,7 +2208,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;رسالة:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</source>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>رسالة اختيارية لإرفاقها بطلب الدفع، والتي سيتم عرضها عند فتح الطلب. ملاحظة: لن يتم إرسال الرسالة مع الدفعة عبر شبكة البتكوين.</translation>
     </message>
     <message>
@@ -2379,7 +2489,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>اخفاء اعدادات رسوم المعاملة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for particl transactions than the network can process.</source>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>عندما يكون هناك حجم معاملات أقل من الفراغ في الكتل، المعدنون وعقد الترحيل أيضا من الممكن أن يفرضوا الحد الأدنى للرسوم. دفع الحد الأدنى للرسوم قد يكون على ما يرام، لكن كن حذرا بأنه هذا الشيء قد يؤدي الى معاملة لن تتأكد أبدا بمجرد أن الطلب على معاملات البتكوين قد أصبح أكثر مما تتحمله الشبكة.</translation>
     </message>
     <message>
@@ -2556,7 +2670,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>انتهاء صلاحية طلب الدفع.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Particl address</source>
+=======
+        <source>Warning: Invalid Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>تحذير: عنوان بتكوين غير صالح</translation>
     </message>
     <message>
@@ -2595,7 +2713,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>اختر عنوانا مستخدم سابقا</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address to send the payment to</source>
+=======
+        <source>The Qtum address to send the payment to</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>عنوان البت كوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -2619,7 +2741,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>المبلغ للإرسال في الوحدة المحددة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less particl than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>سيتم خصم الرسوم من المبلغ الذي يتم إرساله. لذا سوف يتلقى المستلم مبلغ أقل من البتكوين المدخل في حقل المبلغ. في حالة تحديد عدة مستلمين، يتم تقسيم الرسوم بالتساوي.</translation>
     </message>
     <message>
@@ -2647,7 +2773,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>أدخل تسمية لهذا العنوان لإضافته إلى قائمة العناوين المستخدمة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>A message that was attached to the particl: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Particl network.</source>
+=======
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>الرسالة التي تم إرفاقها مع البتكوين: العنوان الذي سيتم تخزينه مع المعاملة للرجوع إليه. ملاحظة: لن يتم إرسال هذه الرسالة عبر شبكة البتكوين.</translation>
     </message>
     <message>
@@ -2681,11 +2811,19 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;توقيع الرسالة</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your addresses to prove you can receive particl sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>تستطيع توقيع رسائل/اتفاقات مع عناوينك لإثبات أنه بإمكانك استقبال بتكوين مرسل إليهم. كن حذرا من عدم توقيع أي شيء غامض أو عشوائي، كهجمات التصيد التي قد تحاول خداعك لتوقيع هويتك لديهم. وقع البيانات المفصلة بالكامل والتي أنت توافق عليها فقط.</translation>
     </message>
     <message>
         <source>The Particl address to sign the message with</source>
+=======
+        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>تستطيع توقيع رسائل/اتفاقات مع عناوينك لإثبات أنه بإمكانك استقبال بتكوين مرسل إليهم. كن حذرا من عدم توقيع أي شيء غامض أو عشوائي، كهجمات التصيد التي قد تحاول خداعك لتوقيع هويتك لديهم. وقع البيانات المفصلة بالكامل والتي أنت توافق عليها فقط.</translation>
+    </message>
+    <message>
+        <source>The Qtum address to sign the message with</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>عنوان البتكوين لتوقيع الرسالة به</translation>
     </message>
     <message>
@@ -2717,7 +2855,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>نسخ التوقيع الحالي إلى حافظة النظام</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان البت كوين هذا</translation>
     </message>
     <message>
@@ -2741,7 +2883,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>أدخل عنوان المتلقي، راسل (تأكد من نسخ فواصل الأسطر، الفراغات، الخ.. تماما) والتوقيع أسفله لتأكيد الرسالة. كن حذرا من عدم قراءة داخل التوقيع أكثر مما هو موقع بالرسالة نفسها، لتجنب خداعك بهجوم man-in-the-middle. لاحظ أنه هذا لاثبات أن الجهة الموقعة تستقبل مع العنوان فقط، لا تستطيع اثبات الارسال لأي معاملة.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address the message was signed with</source>
+=======
+        <source>The Qtum address the message was signed with</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>عنوان البتكوين الذي تم توقيع الرسالة به</translation>
     </message>
     <message>
@@ -2753,7 +2899,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>التوقيع يعطى عندما تكون الرسالة موقعة.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
+=======
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>تحقق من الرسالة للتأكد من توقيعها مع عنوان البتكوين المحدد</translation>
     </message>
     <message>
@@ -3424,7 +3574,7 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
         <translation>تم تكوين تقليم أقل من الحد الأدنى %d ميجابايت. من فضلك استعمل رقم أعلى.</translation>

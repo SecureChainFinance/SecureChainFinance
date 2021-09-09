@@ -28,6 +28,7 @@ std::string EncodeExtKey(const CExtKey& extkey);
 CExtPubKey DecodeExtPubKey(const std::string& str);
 std::string EncodeExtPubKey(const CExtPubKey& extpubkey);
 
+<<<<<<< HEAD
 std::string EncodeDestination(const CTxDestination& dest, bool fBech32=false, bool stake_only=false);
 CTxDestination DecodeDestination(const std::string& str, bool allow_stake_only=false);
 bool IsValidDestinationString(const std::string& str, bool allow_stake_only=false);
@@ -268,5 +269,15 @@ public:
 
     std::string ToStringVersion(CChainParams::Base58Type prefix);
 };
+=======
+std::string EncodeDestination(const CTxDestination& dest);
+CTxDestination DecodeDestination(const std::string& str);
+bool IsValidDestinationString(const std::string& str);
+bool IsValidDestinationString(const std::string& str, const CChainParams& params);
+bool IsValidContractSenderAddressString(const std::string& str);
+
+bool DecodeIndexKey(const std::string& str, uint256& hashBytes, int& type);
+
+>>>>>>> project-a/time/qtumcore0.21
 
 #endif // BITCOIN_KEY_IO_H

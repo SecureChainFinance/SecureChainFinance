@@ -20,7 +20,11 @@ class ConfArgsTest(BitcoinTestFramework):
         # Assume node is stopped
 
         inc_conf_file_path = os.path.join(self.nodes[0].datadir, 'include.conf')
+<<<<<<< HEAD
         with open(os.path.join(self.nodes[0].datadir, 'particl.conf'), 'a', encoding='utf-8') as conf:
+=======
+        with open(os.path.join(self.nodes[0].datadir, 'qtum.conf'), 'a', encoding='utf-8') as conf:
+>>>>>>> project-a/time/qtumcore0.21
             conf.write('includeconf={}\n'.format(inc_conf_file_path))
 
         self.nodes[0].assert_start_raises_init_error(
@@ -64,7 +68,11 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error(expected_msg='Error: Error reading configuration file: parse error on line 4, using # in rpcpassword can be ambiguous and should be avoided')
 
         inc_conf_file2_path = os.path.join(self.nodes[0].datadir, 'include2.conf')
+<<<<<<< HEAD
         with open(os.path.join(self.nodes[0].datadir, 'particl.conf'), 'a', encoding='utf-8') as conf:
+=======
+        with open(os.path.join(self.nodes[0].datadir, 'qtum.conf'), 'a', encoding='utf-8') as conf:
+>>>>>>> project-a/time/qtumcore0.21
             conf.write('includeconf={}\n'.format(inc_conf_file2_path))
 
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
@@ -167,7 +175,11 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error(['-datadir=' + new_data_dir], 'Error: Specified data directory "' + new_data_dir + '" does not exist.')
 
         # Check that using non-existent datadir in conf file fails
+<<<<<<< HEAD
         conf_file = os.path.join(default_data_dir, "particl.conf")
+=======
+        conf_file = os.path.join(default_data_dir, "qtum.conf")
+>>>>>>> project-a/time/qtumcore0.21
 
         # datadir needs to be set before [chain] section
         conf_file_contents = open(conf_file, encoding='utf8').read()

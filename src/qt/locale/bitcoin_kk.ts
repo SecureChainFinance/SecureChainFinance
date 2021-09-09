@@ -48,7 +48,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -167,7 +167,11 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
+=======
+        <source>Qtum</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -340,7 +344,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Transaction amount too small</source>
         <translation>Транзакция өте кішкентай</translation>

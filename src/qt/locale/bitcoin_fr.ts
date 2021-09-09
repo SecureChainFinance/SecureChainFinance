@@ -66,6 +66,7 @@
         <translation>Receiving addresses</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
@@ -73,6 +74,15 @@
         <source>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>These are your Particl addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+    </message>
+    <message>
+        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> project-a/time/qtumcore0.21
 Signing is only possible with addresses of the type 'legacy'.</translation>
     </message>
     <message>
@@ -170,8 +180,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
         <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</translation>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -190,8 +205,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Enter the old passphrase and new passphrase for the wallet.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
         <translation>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <translation>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -254,7 +274,7 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
@@ -364,8 +384,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
         <translation>Send coins to a Particl address</translation>
+=======
+        <source>Send coins to a Qtum address</source>
+        <translation>Send coins to a Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -400,12 +425,21 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Encrypt the private keys that belong to your wallet</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Sign messages with your Particl addresses to prove you own them</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Verify messages to ensure they were signed with specified Particl addresses</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Sign messages with your Qtum addresses to prove you own them</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Qtum addresses</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;File</source>
@@ -424,8 +458,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Tabs toolbar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and particl: URIs)</source>
         <translation>Request payments (generates QR codes and particl: URIs)</translation>
+=======
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <translation>Request payments (generates QR codes and qtum: URIs)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -440,8 +479,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>&amp;Command-line options</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Particl network</source>
         <translation><numerusform>%n active connection to Particl network</numerusform><numerusform>%n active connections to Particl network</numerusform></translation>
+=======
+        <source>%n active connection(s) to Qtum network</source>
+        <translation><numerusform>%n active connection to Qtum network</numerusform><numerusform>%n active connections to Qtum network</numerusform></translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -488,16 +532,26 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>&amp;Load PSBT from file...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
         <translation>Load Partially Signed Particl Transaction</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+        <translation>Load Partially Signed Qtum Transaction</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Load PSBT from clipboard...</source>
         <translation>Load PSBT from clipboard...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction from clipboard</source>
         <translation>Load Partially Signed Particl Transaction from clipboard</translation>
+=======
+        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <translation>Load Partially Signed Qtum Transaction from clipboard</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Node window</source>
@@ -516,8 +570,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>&amp;Receiving addresses</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a particl: URI</source>
         <translation>Open a particl: URI</translation>
+=======
+        <source>Open a qtum: URI</source>
+        <translation>Open a qtum: URI</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Open Wallet</source>
@@ -544,8 +603,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Close all wallets</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Particl command-line options</source>
         <translation>Show the %1 help message to get a list with possible Particl command-line options</translation>
+=======
+        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <translation>Show the %1 help message to get a list with possible Qtum command-line options</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -924,8 +988,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Edit sending address</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Particl address.</source>
         <translation>The entered address "%1" is not a valid Particl address.</translation>
+=======
+        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <translation>The entered address "%1" is not a valid Qtum address.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1021,8 +1090,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation>Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation>Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Discard blocks after verification, except most recent %1 GB (prune)</source>
@@ -1037,8 +1111,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Approximately %1 GB of data will be stored in this directory.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Particl block chain.</source>
         <translation>%1 will download and store a copy of the Particl block chain.</translation>
+=======
+        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <translation>%1 will download and store a copy of the Qtum block chain.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1072,12 +1151,21 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Form</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</source>
         <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the particl network, as detailed below.</translation>
     </message>
     <message>
         <source>Attempting to spend particl that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Attempting to spend particl that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1127,8 +1215,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open particl URI</source>
         <translation>Open particl URI</translation>
+=======
+        <source>Open qtum URI</source>
+        <translation>Open qtum URI</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI:</source>
@@ -1269,8 +1362,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1285,8 +1383,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Allow incomin&amp;g connections</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a SOCKS5 proxy.</source>
         <translation>Connect to the Particl network through a SOCKS5 proxy.</translation>
+=======
+        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <translation>Connect to the Qtum network through a SOCKS5 proxy.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1361,8 +1464,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Whether to show coin control features or not.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation>Connect to the Particl network through a separate SOCKS5 proxy for Tor onion services.</translation>
+=======
+        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1436,8 +1544,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Form</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
         <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1638,16 +1751,26 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Payment request error</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
         <translation>Cannot start particl: click-to-pay handler</translation>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+        <translation>Cannot start qtum: click-to-pay handler</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI handling</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'particl://' is not a valid URI. Use 'particl:' instead.</source>
         <translation>'particl://' is not a valid URI. Use 'particl:' instead.</translation>
+=======
+        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
+        <translation>'qtum://' is not a valid URI. Use 'qtum:' instead.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1666,8 +1789,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</source>
         <translation>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</translation>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1708,8 +1836,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>Amount</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
         <translation>Enter a Particl address (e.g. %1)</translation>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+        <translation>Enter a Qtum address (e.g. %1)</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>%1 d</source>
@@ -2169,8 +2302,13 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation>&amp;Message:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</source>
         <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</translation>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2454,8 +2592,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Hide transaction fee settings</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for particl transactions than the network can process.</source>
         <translation>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for particl transactions than the network can process.</translation>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <translation>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2526,8 +2669,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Cr&amp;eate Unsigned</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Creates a Partially Signed Particl Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>Creates a Partially Signed Particl Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+=======
+        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2574,8 +2722,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>You can increase the fee later (signals Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Please, review your transaction proposal. This will produce a Partially Signed Particl Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>Please, review your transaction proposal. This will produce a Partially Signed Particl Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+=======
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2650,8 +2803,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Particl address</source>
         <translation>Warning: Invalid Particl address</translation>
+=======
+        <source>Warning: Invalid Qtum address</source>
+        <translation>Warning: Invalid Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2689,8 +2847,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Choose previously used address</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address to send the payment to</source>
         <translation>The Particl address to send the payment to</translation>
+=======
+        <source>The Qtum address to send the payment to</source>
+        <translation>The Qtum address to send the payment to</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Alt+A</source>
@@ -2713,8 +2876,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>The amount to send in the selected unit</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less particl than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>The fee will be deducted from the amount being sent. The recipient will receive less particl than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2741,8 +2909,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>A message that was attached to the particl: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Particl network.</source>
         <translation>A message that was attached to the particl: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Particl network.</translation>
+=======
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <translation>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Pay To:</source>
@@ -2775,12 +2948,21 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your addresses to prove you can receive particl sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>You can sign messages/agreements with your addresses to prove you can receive particl sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
         <source>The Particl address to sign the message with</source>
         <translation>The Particl address to sign the message with</translation>
+=======
+        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+    </message>
+    <message>
+        <source>The Qtum address to sign the message with</source>
+        <translation>The Qtum address to sign the message with</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2811,8 +2993,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
         <translation>Sign the message to prove you own this Particl address</translation>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+        <translation>Sign the message to prove you own this Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2835,8 +3022,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Particl address the message was signed with</source>
         <translation>The Particl address the message was signed with</translation>
+=======
+        <source>The Qtum address the message was signed with</source>
+        <translation>The Qtum address the message was signed with</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2847,8 +3039,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>The signature given when the message was signed</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
         <translation>Verify the message to ensure it was signed with the specified Particl address</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <translation>Verify the message to ensure it was signed with the specified Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3538,7 +3735,7 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distributed under the MIT software license, see the accompanying file %s or %s</translation>
@@ -3848,8 +4045,13 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation>Error: Listening for incoming connections failed (listen returned error %s)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%s corrupt. Try using the wallet tool particl-wallet to salvage or restoring a backup.</source>
         <translation>%s corrupt. Try using the wallet tool particl-wallet to salvage or restoring a backup.</translation>
+=======
+        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
+        <translation>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use version 169900 or no version specified.</source>

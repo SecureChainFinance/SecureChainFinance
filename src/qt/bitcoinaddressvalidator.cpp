@@ -80,14 +80,27 @@ QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &po
     return state;
 }
 
+<<<<<<< HEAD
 BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent, bool allow_stakeonly) :
     QValidator(parent), m_allow_stakeonly(allow_stakeonly)
+=======
+BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent, bool senderAddress) :
+    QValidator(parent),
+    m_senderAddress(senderAddress)
+>>>>>>> project-a/time/qtumcore0.21
 {
 }
 
 QValidator::State BitcoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
+
+    if(m_senderAddress &&
+            !IsValidContractSenderAddressString(input.toStdString()))
+    {
+        return QValidator::Invalid;
+    }
+
     // Validate the passed Bitcoin address
     if (IsValidDestinationString(input.toStdString(), m_allow_stakeonly)) {
         return QValidator::Acceptable;

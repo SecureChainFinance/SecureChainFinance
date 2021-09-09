@@ -247,8 +247,33 @@ class BlockDataCopier:
                 continue
             inLenLE = inhdr[4:]
             su = struct.unpack("<I", inLenLE)
+<<<<<<< HEAD
             inLen = su[0] - settings['blkhdr_size'] # length without header
             blk_hdr = self.inF.read(settings['blkhdr_size'])
+=======
+            inLen = su[0] - 180 # length without header
+            blk_hdr = self.inF.read(181)
+            sig_length = blk_hdr[-1]
+            if sig_length < 253:
+                inLen -= 1
+            elif sig_length == 253:
+                s = self.inF.read(2)
+                sig_length = struct.unpack('<H', s)[0]
+                blk_hdr += s
+                inLen -= 3
+            elif sig_length == 254:
+                s = self.inF.read(4)
+                sig_length = struct.unpack('<I', s)[0]
+                blk_hdr += s
+                inLen -= 5
+            else:
+                s = self.inF.read(8)
+                sig_length = struct.unpack('<Q', s)[0]
+                blk_hdr += s
+                inLen -= 9
+            blk_hdr += self.inF.read(sig_length)
+            inLen -= sig_length
+>>>>>>> project-a/time/qtumcore0.21
             inExtent = BlockExtent(self.inFn, self.inF.tell(), inhdr, blk_hdr, inLen)
 
             self.hash_str = calc_hash_str(blk_hdr)
@@ -311,9 +336,9 @@ if __name__ == '__main__':
     settings['rev_hash_bytes'] = settings['rev_hash_bytes'].lower()
 
     if 'netmagic' not in settings:
-        settings['netmagic'] = 'f9beb4d9'
+        settings['netmagic'] = 'f1cfa6d3'
     if 'genesis' not in settings:
-        settings['genesis'] = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
+        settings['genesis'] = '000075aef83cf2853580f8ae8ce6f8c3096cfa21d98334d6e3f95e5582ed986c'
     if 'input' not in settings:
         settings['input'] = 'input'
     if 'hashlist' not in settings:

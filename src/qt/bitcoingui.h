@@ -39,6 +39,9 @@ class WalletFrame;
 class WalletModel;
 class HelpMessageDialog;
 class ModalOverlay;
+class TitleBar;
+class NavigationBar;
+class QtumVersionChecker;
 enum class SynchronizationState;
 
 namespace interfaces {
@@ -53,6 +56,7 @@ class QComboBox;
 class QMenu;
 class QProgressBar;
 class QProgressDialog;
+class QDockWidget;
 QT_END_NAMESPACE
 
 namespace GUIUtil {
@@ -92,6 +96,7 @@ public:
     void removeWallet(WalletModel* walletModel);
     void removeAllWallets();
 #endif // ENABLE_WALLET
+    void setTabBarInfo(QObject* into);
     bool enableWallet = false;
 
     /** Get the tray icon status.
@@ -101,6 +106,8 @@ public:
 
     /** Disconnect core signals from GUI client */
     void unsubscribeFromCoreSignals();
+
+    WalletFrame *getWalletFrame() const;
 
     bool isPrivacyModeActivated() const;
 
@@ -132,9 +139,11 @@ private:
     QLabel* progressBarLabel = nullptr;
     GUIUtil::ClickableProgressBar* progressBar = nullptr;
     QProgressDialog* progressDialog = nullptr;
+    QLabel *labelStakingIcon = nullptr;
 
     QMenuBar* appMenuBar = nullptr;
-    QToolBar* appToolBar = nullptr;
+    TitleBar *appTitleBar = nullptr;
+    NavigationBar *appNavigationBar = nullptr;
     QAction* overviewAction = nullptr;
     QAction* historyAction = nullptr;
     QAction* quitAction = nullptr;
@@ -158,6 +167,21 @@ private:
     QAction* openRPCConsoleAction = nullptr;
     QAction* openAction = nullptr;
     QAction* showHelpMessageAction = nullptr;
+    QAction *restoreWalletAction = nullptr;
+    QAction *unlockWalletAction = nullptr;
+    QAction *lockWalletAction = nullptr;
+    QAction* smartContractAction = nullptr;
+    QAction* createContractAction = nullptr;
+    QAction* sendToContractAction = nullptr;
+    QAction* callContractAction = nullptr;
+    QAction* QRCTokenAction = nullptr;
+    QAction* stakeAction = nullptr;
+    QAction* sendTokenAction = nullptr;
+    QAction* receiveTokenAction = nullptr;
+    QAction* addTokenAction = nullptr;
+    QAction* delegationAction = nullptr;
+    QAction* superStakerAction = nullptr;
+    QAction* walletStakeAction = nullptr;
     QAction* m_create_wallet_action{nullptr};
     QAction* m_open_wallet_action{nullptr};
     QMenu* m_open_wallet_menu{nullptr};
@@ -178,6 +202,8 @@ private:
     RPCConsole* rpcConsole = nullptr;
     HelpMessageDialog* helpMessageDialog = nullptr;
     ModalOverlay* modalOverlay = nullptr;
+    ModalOverlay *modalBackupOverlay = nullptr;
+    QtumVersionChecker *qtumVersionChecker = nullptr;
 
 #ifdef Q_OS_MAC
     CAppNapInhibitor* m_app_nap_inhibitor = nullptr;
@@ -196,6 +222,8 @@ private:
     void createMenuBar();
     /** Create the toolbars */
     void createToolBars();
+    /** Create title bar */
+    void createTitleBars();
     /** Create system tray icon and notification */
     void createTrayIcon();
     /** Create system tray menu (or setup the dock menu) */
@@ -215,7 +243,12 @@ private:
     /** Open the OptionsDialog on the specified tab index */
     void openOptionsDialogWithTab(OptionsDialog::Tab tab);
 
+<<<<<<< HEAD
     QMessageBox mbDevice;
+=======
+    /** Add docking windows to the main windows */
+    void addDockWindows(Qt::DockWidgetArea area, QWidget* widget);
+>>>>>>> project-a/time/qtumcore0.21
 
 Q_SIGNALS:
     /** Signal raised when a URI was entered or dragged to the GUI */
@@ -257,7 +290,7 @@ private:
        @param[in] status            current encryption status
        @see WalletModel::EncryptionStatus
     */
-    void setEncryptionStatus(int status);
+    void setEncryptionStatus(WalletModel *walletModel);
 
     /** Set the hd-enabled status as shown in the UI.
      @param[in] hdEnabled         current hd enabled status
@@ -270,6 +303,9 @@ public Q_SLOTS:
 
     /** Show incoming transaction notification for new transactions. */
     void incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+
+    /** Show incoming transaction notification for new token transactions. */
+    void incomingTokenTransaction(const QString& date, const QString& amount, const QString& type, const QString& address, const QString& label, const QString& walletName, const QString& title);
 #endif // ENABLE_WALLET
 
 private:
@@ -287,6 +323,20 @@ public Q_SLOTS:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
+    /** Switch to create contract page */
+    void gotoCreateContractPage();
+    /** Switch to send contract page */
+    void gotoSendToContractPage();
+    /** Switch to call contract page */
+    void gotoCallContractPage();
+    /** Switch to token page */
+    void gotoTokenPage();
+    /** Switch to stake page */
+    void gotoStakePage();
+    /** Switch to delegation page */
+    void gotoDelegationPage();
+    /** Switch to super staker page */
+    void gotoSuperStakerPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
@@ -330,6 +380,10 @@ public Q_SLOTS:
     void showNormalIfMinimized(bool fToggleHidden);
     /** Simply calls showNormalIfMinimized(true) for use in SLOT() macro */
     void toggleHidden();
+#ifdef ENABLE_WALLET
+    /** Update staking icon **/
+    void updateStakingIcon();
+#endif // ENABLE_WALLET
 
     /** called by a timer to check if ShutdownRequested() has been set **/
     void detectShutdown();
@@ -341,6 +395,8 @@ public Q_SLOTS:
     void setTrayIconVisible(bool);
 
     void showModalOverlay();
+
+    void showModalBackupOverlay();
 };
 
 class UnitDisplayStatusBarControl : public QLabel
@@ -359,6 +415,10 @@ protected:
 private:
     OptionsModel *optionsModel;
     QMenu* menu;
+    int menuMargin;
+    int iconHeight;
+    int iconWidth;
+    QString iconPath;
 
     /** Shows context menu with Display Unit options by the mouse coordinates */
     void onDisplayUnitsClicked(const QPoint& point);

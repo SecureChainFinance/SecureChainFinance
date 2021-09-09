@@ -15,6 +15,7 @@ typedef int64_t CAmount;
 static const CAmount COIN = 100000000;
 static const CAmount CENT = 1000000;
 
+<<<<<<< HEAD
 /** No amount larger than this (in satoshi) is valid.
  *
  * Note that this constant is *not* the total money supply, which in Bitcoin
@@ -27,6 +28,10 @@ static const CAmount CENT = 1000000;
 //static const CAmount MAX_MONEY = std::numeric_limits<int64_t>::max();
 //static const CAmount MAX_MONEY = 100000000 * COIN;
 static const CAmount MAX_MONEY = 21000000 * COIN; // max value of output / transaction
+=======
+/** No amount larger than this (in satoshi) is valid.*/
+static const CAmount MAX_MONEY = 107822406 * COIN + 25 * (COIN / 100);
+>>>>>>> project-a/time/qtumcore0.21
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 #endif //  BITCOIN_AMOUNT_H

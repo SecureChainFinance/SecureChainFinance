@@ -19,9 +19,15 @@
 
 #include <map>
 #include <vector>
+#include <atomic>
 
 #include <QObject>
+<<<<<<< HEAD
 #include <QMessageBox>
+=======
+#include <QStringList>
+#include <QThread>
+>>>>>>> project-a/time/qtumcore0.21
 
 enum class OutputType;
 
@@ -33,6 +39,13 @@ class RecentRequestsTableModel;
 class SendCoinsRecipient;
 class TransactionTableModel;
 class WalletModelTransaction;
+class DelegationItemModel;
+class TokenTransactionTableModel;
+class ContractTableModel;
+class WalletWorker;
+class TokenItemModel;
+class SuperStakerItemModel;
+class DelegationStakerItemModel;
 
 class CCoinControl;
 class CKeyID;
@@ -83,8 +96,14 @@ public:
 
     OptionsModel *getOptionsModel();
     AddressTableModel *getAddressTableModel();
+    ContractTableModel *getContractTableModel();
     TransactionTableModel *getTransactionTableModel();
     RecentRequestsTableModel *getRecentRequestsTableModel();
+    TokenItemModel *getTokenItemModel();
+    TokenTransactionTableModel *getTokenTransactionTableModel();
+    DelegationItemModel *getDelegationItemModel();
+    SuperStakerItemModel *getSuperStakerItemModel();
+    DelegationStakerItemModel *getDelegationStakerItemModel();
 
     EncryptionStatus getEncryptionStatus() const;
 
@@ -115,6 +134,9 @@ public:
     bool setWalletLocked(bool locked, const SecureString &passPhrase=SecureString(), bool stakingOnly=false);
     bool setUnlockedForStaking();
     bool changePassphrase(const SecureString &oldPass, const SecureString &newPass);
+    bool restoreWallet(const QString &filename, const QString &param);
+    bool getWalletUnlockStakingOnly();
+    void setWalletUnlockStakingOnly(bool unlock);
 
     // RAI object for unlocking wallet, returned by requestUnlock()
     class UnlockContext
@@ -134,7 +156,11 @@ public:
         WalletModel *wallet;
         bool valid;
         mutable bool relock; // mutable, as it can be set to false by copying
+<<<<<<< HEAD
         bool was_unlocked_for_staking;
+=======
+        bool stakingOnly;
+>>>>>>> project-a/time/qtumcore0.21
 
         UnlockContext& operator=(const UnlockContext&) = default;
         void CopyFrom(UnlockContext&& rhs);
@@ -161,6 +187,12 @@ public:
 
     bool isMultiwallet();
 
+    QString getRestorePath();
+    QString getRestoreParam();
+    bool restore();
+
+    uint64_t getStakeWeight();
+
     AddressTableModel* getAddressTableModel() const { return addressTableModel; }
 
     bool isHardwareLinkedWallet() const;
@@ -177,9 +209,11 @@ public:
     std::unique_ptr<interfaces::Handler> m_handler_status_changed;
     std::unique_ptr<interfaces::Handler> m_handler_address_book_changed;
     std::unique_ptr<interfaces::Handler> m_handler_transaction_changed;
+    std::unique_ptr<interfaces::Handler> m_handler_token_changed;
     std::unique_ptr<interfaces::Handler> m_handler_show_progress;
     std::unique_ptr<interfaces::Handler> m_handler_watch_only_changed;
     std::unique_ptr<interfaces::Handler> m_handler_can_get_addrs_changed;
+    std::unique_ptr<interfaces::Handler> m_handler_contract_book_changed;
     ClientModel* m_client_model;
     interfaces::Node& m_node;
 
@@ -193,8 +227,14 @@ public:
     OptionsModel *optionsModel;
 
     AddressTableModel *addressTableModel;
+    ContractTableModel *contractTableModel;
     TransactionTableModel *transactionTableModel;
     RecentRequestsTableModel *recentRequestsTableModel;
+    TokenItemModel *tokenItemModel;
+    TokenTransactionTableModel *tokenTransactionTableModel;
+    DelegationItemModel *delegationItemModel;
+    SuperStakerItemModel *superStakerItemModel;
+    DelegationStakerItemModel *delegationStakerItemModel;
 
     // Cache some values to be able to detect changes
     interfaces::WalletBalances m_cached_balances;
@@ -204,10 +244,29 @@ public:
     // Block hash denoting when the last balance update was done.
     uint256 m_cached_last_update_tip{};
 
+    int pollNum = 0;
+
+    QString restorePath;
+    QString restoreParam;
+
+    uint64_t nWeight;
+    std::atomic<bool> updateStakeWeight;
+    std::atomic<bool> updateCoinAddresses;
+
+    QThread t;
+    WalletWorker *worker;
+
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
+<<<<<<< HEAD
 
     void checkBalanceChanged(const interfaces::WalletBalances& new_balances);
+=======
+    bool checkBalanceChanged(const interfaces::WalletBalances& new_balances);
+    void checkTokenBalanceChanged();
+    void checkDelegationChanged();
+    void checkSuperStakerChanged();
+>>>>>>> project-a/time/qtumcore0.21
 
 Q_SIGNALS:
     // Signal that balance in wallet changed
@@ -239,8 +298,13 @@ Q_SIGNALS:
     // Notify that there are now keys in the keypool
     void canGetAddressesChanged();
 
+<<<<<<< HEAD
     // Signal that reserved balance in wallet changed
     void notifyReservedBalanceChanged(CAmount nValue);
+=======
+    // Signal that available coin addresses are changed
+    void availableAddressesChanged(QStringList spendableAddresses, QStringList allAddresses, bool includeZeroValue);
+>>>>>>> project-a/time/qtumcore0.21
 
 public Q_SLOTS:
     /* Starts a timer to periodically update the balance */
@@ -256,6 +320,7 @@ public Q_SLOTS:
     void updateWatchOnlyFlag(bool fHaveWatchonly);
     /* Current, immature or unconfirmed balance might have changed - emit 'balanceChanged' if so */
     void pollBalanceChanged();
+<<<<<<< HEAD
 
     // Reserved balance changed
     void setReserveBalance(CAmount nReserveBalanceNew);
@@ -265,6 +330,16 @@ public Q_SLOTS:
 
     // Rescan blockchain for transactions
     void startRescan();
+=======
+    /* New, updated or removed contract book entry */
+    void updateContractBook(const QString &address, const QString &label, const QString &abi, int status);
+    /* Set that update for coin address is needed */
+    void checkCoinAddresses();
+    /* Update coin addresses when changed*/
+    void checkCoinAddressesChanged();
+    /* Update stake weight when changed*/
+    void checkStakeWeightChanged();
+>>>>>>> project-a/time/qtumcore0.21
 };
 
 #endif // BITCOIN_QT_WALLETMODEL_H

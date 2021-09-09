@@ -9,6 +9,7 @@
 #include <consensus/validation.h>
 #include <streams.h>
 #include <validation.h>
+#include <test/util/setup_common.h>
 
 // These are the two major time-sinks which happen after we have fully received
 // a block off the wire, but before we can relay the block on to peers using
@@ -16,31 +17,32 @@
 
 static void DeserializeBlockTest(benchmark::Bench& bench)
 {
-    CDataStream stream(benchmark::data::block413567, SER_NETWORK, PROTOCOL_VERSION);
+    CDataStream stream(benchmark::data::blockbench, SER_NETWORK, PROTOCOL_VERSION);
     char a = '\0';
     stream.write(&a, 1); // Prevent compaction
 
     bench.unit("block").run([&] {
         CBlock block;
         stream >> block;
-        bool rewound = stream.Rewind(benchmark::data::block413567.size());
+        bool rewound = stream.Rewind(benchmark::data::blockbench.size());
         assert(rewound);
     });
 }
 
 static void DeserializeAndCheckBlockTest(benchmark::Bench& bench)
 {
-    CDataStream stream(benchmark::data::block413567, SER_NETWORK, PROTOCOL_VERSION);
+    CDataStream stream(benchmark::data::blockbench, SER_NETWORK, PROTOCOL_VERSION);
     char a = '\0';
     stream.write(&a, 1); // Prevent compaction
 
     ArgsManager bench_args;
     const auto chainParams = CreateChainParams(bench_args, CBaseChainParams::MAIN);
+    TestingSetup test_setup;
 
     bench.unit("block").run([&] {
         CBlock block; // Note that CBlock caches its checked state, so we need to recreate it here
         stream >> block;
-        bool rewound = stream.Rewind(benchmark::data::block413567.size());
+        bool rewound = stream.Rewind(benchmark::data::blockbench.size());
         assert(rewound);
 
         BlockValidationState validationState;

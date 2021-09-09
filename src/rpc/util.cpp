@@ -18,8 +18,12 @@
 #include <boost/algorithm/string/split.hpp>
 
 const std::string UNIX_EPOCH_TIME = "UNIX epoch time";
+<<<<<<< HEAD
 const std::string EXAMPLE_ADDRESS_BTC[2] = {"bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl", "bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3"};
 const std::string EXAMPLE_ADDRESS_PART[2] = {"PswXnoragjpAtaySWkPSmWQe3Fc8LmviVc", "Pka9M2Bva8WetQhQ4ngC255HAbMJf5P5Dc"};
+=======
+const std::string EXAMPLE_ADDRESS[2] = {"QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", "QX1GkJdye9WoUnrE2v6ZQhQ72EUVDtGXQX"};
+>>>>>>> project-a/time/qtumcore0.21
 
 void RPCTypeCheck(const UniValue& params,
                   const std::list<UniValueType>& typesExpected,
@@ -133,7 +137,11 @@ CoinStatsHashType ParseHashType(const UniValue& param, const CoinStatsHashType d
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
+<<<<<<< HEAD
     return "> particl-cli " + methodname + " " + args + "\n";
+=======
+    return "> qtum-cli " + methodname + " " + args + "\n";
+>>>>>>> project-a/time/qtumcore0.21
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

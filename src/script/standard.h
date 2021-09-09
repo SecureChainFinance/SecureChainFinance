@@ -16,11 +16,20 @@
 
 static const bool DEFAULT_ACCEPT_DATACARRIER = true;
 
+//contract executions with less gas than this are not standard
+//Make sure is always equal or greater than MINIMUM_GAS_LIMIT (which we can't reference here due to insane header dependency chains)
+static const uint64_t STANDARD_MINIMUM_GAS_LIMIT = 10000;
+//contract executions with a price cheaper than this (in satoshis) are not standard
+//TODO this needs to be controlled by DGP and needs to be propogated from consensus parameters
+static const uint64_t STANDARD_MINIMUM_GAS_PRICE = 1;
+
 class CKeyID;
 class CScript;
 class CStealthAddress;
 struct CExtPubKey;
 struct ScriptHash;
+
+typedef std::vector<unsigned char> valtype;
 
 template<typename HashType>
 class BaseHash
@@ -144,6 +153,7 @@ enum class TxoutType {
     WITNESS_V0_KEYHASH,
     WITNESS_V1_TAPROOT,
     WITNESS_UNKNOWN, //!< Only for Witness versions not already defined above
+<<<<<<< HEAD
 
     SCRIPTHASH256,
     PUBKEYHASH256,
@@ -152,6 +162,12 @@ enum class TxoutType {
     TIMELOCKED_PUBKEYHASH,
     TIMELOCKED_PUBKEYHASH256,
     TIMELOCKED_MULTISIG,
+=======
+    CREATE_SENDER,
+    CALL_SENDER,
+    CREATE,
+    CALL,
+>>>>>>> project-a/time/qtumcore0.21
 };
 
 class CNoDestination {
@@ -235,11 +251,30 @@ struct WitnessUnknown
 typedef boost::variant<CNoDestination, PKHash, ScriptHash, WitnessV0ScriptHash, WitnessV0KeyHash, WitnessUnknown,
     CStealthAddress, CExtPubKey, CKeyID256, CScriptID256> CTxDestination;
 
+enum addresstype
+{
+    PUBKEYHASH = 1,
+    SCRIPTHASH = 2,
+    WITNESSSCRIPTHASH = 3,
+    WITNESSPUBKEYHASH = 4,
+    NONSTANDARD = 5
+};
+
 /** Check whether a CTxDestination is a CNoDestination. */
 bool IsValidDestination(const CTxDestination& dest);
 
 /** Get the name of a TxoutType as a string */
 std::string GetTxnOutputType(TxoutType t);
+
+/** Check whether a CTxDestination can be used as contract sender address. */
+bool IsValidContractSenderAddress(const CTxDestination& dest);
+
+/** Parse a output public key for the sender public key and sender signature. */
+bool ExtractSenderData(const CScript& outputPubKey, CScript* senderPubKey, CScript* senderSig);
+
+bool GetSenderPubKey(const CScript& outputPubKey, CScript& senderPubKey);
+
+PKHash ExtractPublicKeyHash(const CScript& scriptPubKey, bool* OK = nullptr);
 
 /**
  * Parse a scriptPubKey and identify script type for standard scripts. If
@@ -251,7 +286,7 @@ std::string GetTxnOutputType(TxoutType t);
  * @param[out]  vSolutionsRet  Vector of parsed pubkeys and hashes
  * @return                     The script type. TxoutType::NONSTANDARD represents a failed solve.
  */
-TxoutType Solver(const CScript& scriptPubKey, std::vector<std::vector<unsigned char>>& vSolutionsRet);
+TxoutType Solver(const CScript& scriptPubKey, std::vector<std::vector<unsigned char>>& vSolutionsRet, bool contractConsensus=false, bool allowEmptySenderSig=false);
 
 /**
  * Parse a standard scriptPubKey for the destination address. Assigns result to
@@ -259,7 +294,7 @@ TxoutType Solver(const CScript& scriptPubKey, std::vector<std::vector<unsigned c
  * scripts, instead use ExtractDestinations. Currently only works for P2PK,
  * P2PKH, P2SH, P2WPKH, and P2WSH scripts.
  */
-bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet);
+bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet, TxoutType* typeRet = NULL);
 
 /**
  * Parse a standard scriptPubKey with one or more destination addresses. For
@@ -272,7 +307,7 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet)
  * encodable as an address) with key identifiers (of keys involved in a
  * CScript), and its use should be phased out.
  */
-bool ExtractDestinations(const CScript& scriptPubKey, TxoutType& typeRet, std::vector<CTxDestination>& addressRet, int& nRequiredRet);
+bool ExtractDestinations(const CScript& scriptPubKey, TxoutType& typeRet, std::vector<CTxDestination>& addressRet, int& nRequiredRet, bool contractConsensus=false);
 
 /**
  * Generate a Bitcoin scriptPubKey for the given CTxDestination. Returns a P2PKH
@@ -287,10 +322,24 @@ CScript GetScriptForRawPubKey(const CPubKey& pubkey);
 /** Generate a multisig script. */
 CScript GetScriptForMultisig(int nRequired, const std::vector<CPubKey>& keys);
 
+<<<<<<< HEAD
 namespace particl {
 TxoutType ToTxoutType(uint8_t type_byte);
 uint8_t FromTxoutType(TxoutType type_class);
 bool ExtractStakingKeyID(const CScript &scriptPubKey, CKeyID &keyID);
 }
+=======
+struct DataVisitor : public boost::static_visitor<valtype>
+{
+    valtype operator()(const CNoDestination& noDest) const;
+    valtype operator()(const PKHash& keyID) const;
+    valtype operator()(const ScriptHash& scriptID) const;
+    valtype operator()(const WitnessV0ScriptHash& witnessScriptHash) const;
+    valtype operator()(const WitnessV0KeyHash& witnessKeyHash) const;
+    valtype operator()(const WitnessUnknown& witnessUnknown) const;
+};
+
+bool ExtractDestination(const COutPoint& prevout, const CScript& scriptPubKey, CTxDestination& addressRet, TxoutType* typeRet = NULL);
+>>>>>>> project-a/time/qtumcore0.21
 
 #endif // BITCOIN_SCRIPT_STANDARD_H

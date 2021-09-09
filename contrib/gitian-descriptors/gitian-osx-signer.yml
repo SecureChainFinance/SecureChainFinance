@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 name: "particl-dmg-signer"
+=======
+name: "qtum-dmg-signer"
+>>>>>>> project-a/time/qtumcore0.21
 distro: "ubuntu"
 suites:
 - "bionic"
@@ -9,13 +13,21 @@ packages:
 - "faketime"
 - "python3-pip"
 remotes:
+<<<<<<< HEAD
 - "url": "https://github.com/particl/particl-detached-sigs.git"
+=======
+- "url": "https://github.com/qtumproject/qtum-detached-sigs.git"
+>>>>>>> project-a/time/qtumcore0.21
   "dir": "signature"
 - "url": "https://github.com/achow101/signapple.git"
   "dir": "signapple"
   "commit": "b084cbbf44d5330448ffce0c7d118f75781b64bd"
 files:
+<<<<<<< HEAD
 - "particl-osx-unsigned.tar.gz"
+=======
+- "qtum-osx-unsigned.tar.gz"
+>>>>>>> project-a/time/qtumcore0.21
 script: |
   set -e -o pipefail
 
@@ -41,9 +53,15 @@ script: |
   export PATH="$HOME/.local/bin":$PATH
   cd ..
 
+<<<<<<< HEAD
   UNSIGNED_TARBALL=particl-osx-unsigned.tar.gz
   UNSIGNED_APP=dist/Particl-Qt.app
   SIGNED=particl-osx-signed.dmg
+=======
+  UNSIGNED_TARBALL=qtum-osx-unsigned.tar.gz
+  UNSIGNED_APP=dist/Qtum-Qt.app
+  SIGNED=qtum-osx-signed.dmg
+>>>>>>> project-a/time/qtumcore0.21
 
   tar -xf ${UNSIGNED_TARBALL}
   OSX_VOLNAME="$(cat osx_volname)"

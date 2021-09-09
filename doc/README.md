@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 Particl Core
+=======
+Qtum Core
+>>>>>>> project-a/time/qtumcore0.21
 =============
 
 Setup
 ---------------------
+<<<<<<< HEAD
 Particl Core is the original Particl client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Particl transactions, which requires a few gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 To download Particl Core, visit [particl.io](https://particl.io/downloads/).
@@ -10,11 +15,21 @@ To download Particl Core, visit [particl.io](https://particl.io/downloads/).
 Running
 ---------------------
 The following are some helpful notes on how to run Particl Core on your native platform.
+=======
+Qtum Core is the original Qtum client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Qtum transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+
+To download Qtum Core, visit [qtumcore.org](https://www.qtumcore.org/).
+
+Running
+---------------------
+The following are some helpful notes on how to run Qtum Core on your native platform.
+>>>>>>> project-a/time/qtumcore0.21
 
 ### Unix
 
 Unpack the files into a directory and run:
 
+<<<<<<< HEAD
 - `bin/particl-qt` (GUI) or
 - `bin/particld` (headless)
 
@@ -25,6 +40,18 @@ Unpack the files into a directory, and then run particl-qt.exe.
 ### macOS
 
 Drag Particl Core to your applications folder, and then run Particl Core.
+=======
+- `bin/qtum-qt` (GUI) or
+- `bin/qtumd` (headless)
+
+### Windows
+
+Unpack the files into a directory, and then run qtum-qt.exe.
+
+### macOS
+
+Drag Qtum Core to your applications folder, and then run Qtum Core.
+>>>>>>> project-a/time/qtumcore0.21
 
 ### Need Help?
 

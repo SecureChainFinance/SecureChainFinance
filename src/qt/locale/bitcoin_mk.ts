@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -126,7 +126,11 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Particl address</source>
+=======
+        <source>Send coins to a Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -285,7 +289,11 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Particl</source>
+=======
+        <source>Qtum</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -602,6 +610,6 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     </context>
 </TS>

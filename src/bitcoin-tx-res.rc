@@ -16,6 +16,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
+<<<<<<< HEAD
             VALUE "CompanyName",        "Particl"
             VALUE "FileDescription",    "particl-tx (CLI Particl transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
@@ -24,6 +25,16 @@ BEGIN
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "particl-tx.exe"
             VALUE "ProductName",        "particl-tx"
+=======
+            VALUE "CompanyName",        "Qtum"
+            VALUE "FileDescription",    "qtum-tx (CLI Qtum transaction editor utility)"
+            VALUE "FileVersion",        VER_FILEVERSION_STR
+            VALUE "InternalName",       "qtum-tx"
+            VALUE "LegalCopyright",     COPYRIGHT_STR
+            VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
+            VALUE "OriginalFilename",   "qtum-tx.exe"
+            VALUE "ProductName",        "qtum-tx"
+>>>>>>> project-a/time/qtumcore0.21
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

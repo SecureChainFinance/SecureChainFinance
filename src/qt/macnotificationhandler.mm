@@ -13,7 +13,11 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
+<<<<<<< HEAD
         return @"io.particl.Particl-Qt";
+=======
+        return @"org.qtum.Qtum-Qt";
+>>>>>>> project-a/time/qtumcore0.21
     } else {
         return [self __bundleIdentifier];
     }

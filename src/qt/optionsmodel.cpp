@@ -20,16 +20,22 @@
 #include <txdb.h> // for -dbcache defaults
 #include <util/string.h>
 
+#ifdef ENABLE_WALLET
+#include <wallet/wallet.h>
+#include <wallet/walletdb.h>
+#endif
+
 #include <QDebug>
 #include <QSettings>
 #include <QStringList>
+#include <util/moneystr.h>
 
 const char *DEFAULT_GUI_PROXY_HOST = "127.0.0.1";
 
 static const QString GetDefaultProxyAddress();
 
 OptionsModel::OptionsModel(QObject *parent, bool resetSettings) :
-    QAbstractListModel(parent)
+    QAbstractListModel(parent), restartApp(false)
 {
     Init(resetSettings);
 }
@@ -101,6 +107,35 @@ void OptionsModel::Init(bool resetSettings)
     if (!gArgs.SoftSetArg("-dbcache", settings.value("nDatabaseCache").toString().toStdString()))
         addOverriddenOption("-dbcache");
 
+#ifdef ENABLE_WALLET
+    if (!settings.contains("fSuperStaking"))
+        settings.setValue("fSuperStaking", false);
+    bool fSuperStaking = settings.value("fSuperStaking").toBool();
+    if (!gArgs.SoftSetBoolArg("-superstaking", fSuperStaking))
+        addOverriddenOption("-superstaking");
+    if(fSuperStaking)
+    {
+        if (!gArgs.SoftSetBoolArg("-staking", true))
+            addOverriddenOption("-staking");
+        if (!gArgs.SoftSetBoolArg("-logevents", true))
+            addOverriddenOption("-logevents");
+        if (!gArgs.SoftSetBoolArg("-addrindex", true))
+            addOverriddenOption("-addrindex");
+    }
+#endif
+
+    if (!settings.contains("fLogEvents"))
+        settings.setValue("fLogEvents", fLogEvents);
+    if (!gArgs.SoftSetBoolArg("-logevents", settings.value("fLogEvents").toBool()))
+        addOverriddenOption("-logevents");
+
+#ifdef ENABLE_WALLET
+    if (!settings.contains("nReserveBalance"))
+        settings.setValue("nReserveBalance", (long long)DEFAULT_RESERVE_BALANCE);
+    if (!gArgs.SoftSetArg("-reservebalance", FormatMoney(settings.value("nReserveBalance").toLongLong())))
+        addOverriddenOption("-reservebalance");
+#endif
+
     if (!settings.contains("nThreadsScriptVerif"))
         settings.setValue("nThreadsScriptVerif", DEFAULT_SCRIPTCHECK_THREADS);
     if (!gArgs.SoftSetArg("-par", settings.value("nThreadsScriptVerif").toString().toStdString()))
@@ -116,6 +151,7 @@ void OptionsModel::Init(bool resetSettings)
     if (!gArgs.SoftSetBoolArg("-spendzeroconfchange", settings.value("bSpendZeroConfChange").toBool()))
         addOverriddenOption("-spendzeroconfchange");
 
+<<<<<<< HEAD
     if (!settings.contains("fShowIncomingStakeNotifications"))
         settings.setValue("fShowIncomingStakeNotifications", true);
     fShowIncomingStakeNotifications = settings.value("fShowIncomingStakeNotifications").toBool();
@@ -123,7 +159,16 @@ void OptionsModel::Init(bool resetSettings)
     if (!settings.contains("show_zero_value_coinstakes"))
         settings.setValue("show_zero_value_coinstakes", true);
     show_zero_value_coinstakes = settings.value("show_zero_value_coinstakes").toBool();
+=======
+    if (!settings.contains("bZeroBalanceAddressToken"))
+        settings.setValue("bZeroBalanceAddressToken", DEFAULT_ZERO_BALANCE_ADDRESS_TOKEN);
+    bZeroBalanceAddressToken = settings.value("bZeroBalanceAddressToken").toBool();
+>>>>>>> project-a/time/qtumcore0.21
 #endif
+
+    if (!settings.contains("fCheckForUpdates"))
+        settings.setValue("fCheckForUpdates", DEFAULT_CHECK_FOR_UPDATES);
+    fCheckForUpdates = settings.value("fCheckForUpdates").toBool();
 
     // Network
     if (!settings.contains("fUseUPnP"))
@@ -135,6 +180,23 @@ void OptionsModel::Init(bool resetSettings)
         settings.setValue("fListen", DEFAULT_LISTEN);
     if (!gArgs.SoftSetBoolArg("-listen", settings.value("fListen").toBool()))
         addOverriddenOption("-listen");
+
+#ifdef ENABLE_WALLET
+    if (!settings.contains("fUseChangeAddress"))
+    {
+        // Set the default value
+        bool useChangeAddress = DEFAULT_USE_CHANGE_ADDRESS;
+
+        // Get the old parameter value if exist
+        if(settings.contains("fNotUseChangeAddress"))
+            useChangeAddress = !settings.value("fNotUseChangeAddress").toBool();
+
+        // Set the parameter value
+        settings.setValue("fUseChangeAddress", useChangeAddress);
+    }
+    if (!gArgs.SoftSetBoolArg("-usechangeaddress", settings.value("fUseChangeAddress").toBool()))
+        addOverriddenOption("-usechangeaddress");
+#endif
 
     if (!settings.contains("fUseProxy"))
         settings.setValue("fUseProxy", false);
@@ -163,12 +225,19 @@ void OptionsModel::Init(bool resetSettings)
         addOverriddenOption("-lang");
     language = settings.value("language").toString();
 
+<<<<<<< HEAD
     // Reserve Balance
     if (!settings.contains("reservebalance"))
         settings.setValue("reservebalance", "0");
     if (!gArgs.SoftSetArg("-reservebalance", FormatMoney(settings.value("reservebalance").toLongLong())))
         addOverriddenOption("-reservebalance");
     nReserveBalance = settings.value("reservebalance").toLongLong();
+=======
+    if (!settings.contains("Theme"))
+        settings.setValue("Theme", "");
+
+    theme = settings.value("Theme").toString();
+>>>>>>> project-a/time/qtumcore0.21
 }
 
 /** Helper function to copy contents from one QSettings to another.
@@ -319,10 +388,17 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
 #ifdef ENABLE_WALLET
         case SpendZeroConfChange:
             return settings.value("bSpendZeroConfChange");
+<<<<<<< HEAD
         case ShowIncomingStakeNotifications:
             return fShowIncomingStakeNotifications;
         case ShowZeroValueCoinstakes:
             return show_zero_value_coinstakes;
+=======
+        case ZeroBalanceAddressToken:
+            return settings.value("bZeroBalanceAddressToken");
+        case ReserveBalance:
+            return settings.value("nReserveBalance");
+>>>>>>> project-a/time/qtumcore0.21
 #endif
         case DisplayUnit:
             return nDisplayUnit;
@@ -338,12 +414,29 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return settings.value("nPruneSize");
         case DatabaseCache:
             return settings.value("nDatabaseCache");
+        case LogEvents:
+            return settings.value("fLogEvents");
+#ifdef ENABLE_WALLET
+        case SuperStaking:
+            return settings.value("fSuperStaking");
+#endif
         case ThreadsScriptVerif:
             return settings.value("nThreadsScriptVerif");
         case Listen:
             return settings.value("fListen");
+<<<<<<< HEAD
         case ReserveBalance:
             return settings.value("reservebalance");
+=======
+#ifdef ENABLE_WALLET
+        case UseChangeAddress:
+            return settings.value("fUseChangeAddress");
+#endif
+        case CheckForUpdates:
+            return settings.value("fCheckForUpdates");
+        case Theme:
+            return settings.value("Theme");
+>>>>>>> project-a/time/qtumcore0.21
         default:
             return QVariant();
         }
@@ -440,6 +533,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
                 setRestartRequired(true);
             }
             break;
+<<<<<<< HEAD
         case ShowIncomingStakeNotifications:
             fShowIncomingStakeNotifications = value.toBool();
             settings.setValue("fShowIncomingStakeNotifications", fShowIncomingStakeNotifications);
@@ -448,6 +542,12 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             show_zero_value_coinstakes = value.toBool();
             settings.setValue("show_zero_value_coinstakes", show_zero_value_coinstakes);
             Q_EMIT txnViewOptionsChanged();
+=======
+        case ZeroBalanceAddressToken:
+            bZeroBalanceAddressToken = value.toBool();
+            settings.setValue("bZeroBalanceAddressToken", bZeroBalanceAddressToken);
+            Q_EMIT zeroBalanceAddressTokenChanged(bZeroBalanceAddressToken);
+>>>>>>> project-a/time/qtumcore0.21
             break;
 #endif
         case DisplayUnit:
@@ -495,6 +595,26 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
                 setRestartRequired(true);
             }
             break;
+        case LogEvents:
+            if (settings.value("fLogEvents") != value) {
+                settings.setValue("fLogEvents", value);
+                setRestartRequired(true);
+            }
+            break;
+#ifdef ENABLE_WALLET
+        case SuperStaking:
+            if (settings.value("fSuperStaking") != value) {
+                settings.setValue("fSuperStaking", value);
+                setRestartRequired(true);
+            }
+            break;
+        case ReserveBalance:
+            if (settings.value("nReserveBalance") != value) {
+                settings.setValue("nReserveBalance", value);
+                setRestartRequired(true);
+            }
+            break;
+#endif
         case ThreadsScriptVerif:
             if (settings.value("nThreadsScriptVerif") != value) {
                 settings.setValue("nThreadsScriptVerif", value);
@@ -504,6 +624,28 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
         case Listen:
             if (settings.value("fListen") != value) {
                 settings.setValue("fListen", value);
+                setRestartRequired(true);
+            }
+            break;
+#ifdef ENABLE_WALLET
+        case UseChangeAddress:
+            if (settings.value("fUseChangeAddress") != value) {
+                settings.setValue("fUseChangeAddress", value);
+                // Set fNotUseChangeAddress for backward compatibility reason
+                settings.setValue("fNotUseChangeAddress", !value.toBool());
+                setRestartRequired(true);
+            }
+            break;
+#endif
+        case CheckForUpdates:
+            if (settings.value("fCheckForUpdates") != value) {
+                settings.setValue("fCheckForUpdates", value);
+                fCheckForUpdates = value.toBool();
+            }
+            break;
+        case Theme:
+            if (settings.value("Theme") != value) {
+                settings.setValue("Theme", value);
                 setRestartRequired(true);
             }
             break;
@@ -572,8 +714,20 @@ void OptionsModel::checkAndMigrate()
     }
 }
 
+<<<<<<< HEAD
 void OptionsModel::updateReservedBalance(CAmount reservedBalance)
 {
     QSettings settings;
     settings.setValue("reservebalance", QString::number(reservedBalance));
 };
+=======
+bool OptionsModel::getRestartApp() const
+{
+    return restartApp;
+}
+
+void OptionsModel::setRestartApp(bool value)
+{
+    restartApp = value;
+}
+>>>>>>> project-a/time/qtumcore0.21

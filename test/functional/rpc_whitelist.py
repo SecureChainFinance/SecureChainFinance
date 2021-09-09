@@ -55,7 +55,11 @@ class RPCWhitelistTest(BitcoinTestFramework):
         ]
         # These commands shouldn't be allowed for any user to test failures
         self.never_allowed = ["getnetworkinfo"]
+<<<<<<< HEAD
         with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "particl.conf"), 'a', encoding='utf8') as f:
+=======
+        with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "qtum.conf"), 'a', encoding='utf8') as f:
+>>>>>>> project-a/time/qtumcore0.21
             f.write("\nrpcwhitelistdefault=0\n")
             for user in self.users:
                 f.write("rpcauth=" + user[0] + ":" + user[1] + "\n")

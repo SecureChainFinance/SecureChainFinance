@@ -11,7 +11,11 @@
 
 #include <string>
 
+<<<<<<< HEAD
 const std::string CURRENCY_UNIT = "PART"; // One formatted unit
+=======
+const std::string CURRENCY_UNIT = "QTUM"; // One formatted unit
+>>>>>>> project-a/time/qtumcore0.21
 const std::string CURRENCY_ATOM = "sat"; // One indivisible minimum value unit
 
 /* Used to determine type of fee estimation requested */

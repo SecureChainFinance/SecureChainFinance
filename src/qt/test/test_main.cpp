@@ -70,7 +70,11 @@ int main(int argc, char* argv[])
     // QApplication:: and QCoreApplication:: in the tests
     BitcoinApplication app;
     app.setNode(*node);
+<<<<<<< HEAD
     app.setApplicationName("Particl-Qt-test");
+=======
+    app.setApplicationName("Qtum-Qt-test");
+>>>>>>> project-a/time/qtumcore0.21
 
     app.node().context()->args = &gArgs;     // Make gArgs available in the NodeContext
     AppTests app_tests(app);

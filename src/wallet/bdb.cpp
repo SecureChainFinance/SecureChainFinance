@@ -283,7 +283,11 @@ bool BerkeleyDatabase::Verify(bilingual_str& errorStr)
         Db db(env->dbenv.get(), 0);
         int result = db.verify(strFile.c_str(), nullptr, nullptr, 0);
         if (result != 0) {
+<<<<<<< HEAD
             errorStr = strprintf(_("%s corrupt. Try using the wallet tool particl-wallet to salvage or restoring a backup."), file_path);
+=======
+            errorStr = strprintf(_("%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup."), file_path);
+>>>>>>> project-a/time/qtumcore0.21
             return false;
         }
     }

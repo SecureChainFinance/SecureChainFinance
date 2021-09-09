@@ -76,7 +76,7 @@ public:
     QString addRow(const QString &type, const QString &label, const QString &address, const OutputType address_type, AddrType addrType = ADDR_STANDARD);
 
     /** Look up label for address in address book, if not found return empty string. */
-    QString labelForAddress(const QString &address) const;
+    QString labelForAddress(const QString &address, bool cached = true) const;
 
     /** Look up purpose for address in address book, if not found return empty string. */
     QString purposeForAddress(const QString &address) const;

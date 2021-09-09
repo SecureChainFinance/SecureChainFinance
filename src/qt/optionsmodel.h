@@ -19,6 +19,7 @@ class Node;
 
 extern const char *DEFAULT_GUI_PROXY_HOST;
 static constexpr uint16_t DEFAULT_GUI_PROXY_PORT = 9050;
+static const bool DEFAULT_CHECK_FOR_UPDATES = true;
 
 /**
  * Convert configured prune target MiB to displayed GB. Round up to avoid underestimating max disk usage.
@@ -63,11 +64,22 @@ public:
         Prune,                  // bool
         PruneSize,              // int
         DatabaseCache,          // int
+        LogEvents,              // bool
+        SuperStaking,           // bool
         SpendZeroConfChange,    // bool
+<<<<<<< HEAD
         ShowIncomingStakeNotifications, // bool
         ShowZeroValueCoinstakes, // bool
         Listen,                 // bool
         ReserveBalance,         // int
+=======
+        ZeroBalanceAddressToken,// bool
+        Listen,                 // bool
+        UseChangeAddress,       // bool
+        CheckForUpdates,        // bool
+        ReserveBalance,         // CAmount
+        Theme,                  // QString
+>>>>>>> project-a/time/qtumcore0.21
         OptionIDRowCount,
     };
 
@@ -88,10 +100,12 @@ public:
     QString getThirdPartyTxUrls() const { return strThirdPartyTxUrls; }
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
     const QString& getOverriddenByCommandLine() { return strOverriddenByCommandLine; }
+    bool getCheckForUpdates() const { return fCheckForUpdates; }
 
     /* Explicit setters */
     void SetPruneEnabled(bool prune, bool force = false);
     void SetPruneTargetGB(int prune_target_gb, bool force = false);
+    bool getZeroBalanceAddressToken() const { return bZeroBalanceAddressToken; }
 
     /* Restart flag helper */
     void setRestartRequired(bool fRequired);
@@ -100,8 +114,13 @@ public:
     interfaces::Node& node() const { assert(m_node); return *m_node; }
     void setNode(interfaces::Node& node) { assert(!m_node); m_node = &node; }
 
+<<<<<<< HEAD
     bool getShowIncomingStakeNotifications() { return fShowIncomingStakeNotifications; }
     bool getShowZeroValueCoinstakes() { return show_zero_value_coinstakes; }
+=======
+    bool getRestartApp() const;
+    void setRestartApp(bool value);
+>>>>>>> project-a/time/qtumcore0.21
 
 private:
     interfaces::Node* m_node = nullptr;
@@ -117,6 +136,10 @@ private:
     bool show_zero_value_coinstakes;
     /* settings that were overridden by command-line */
     QString strOverriddenByCommandLine;
+    bool fCheckForUpdates;
+    bool bZeroBalanceAddressToken;
+    QString theme;
+    bool restartApp;
 
     CAmount nReserveBalance;
 
@@ -130,10 +153,14 @@ Q_SIGNALS:
     void txnViewOptionsChanged();
     void coinControlFeaturesChanged(bool);
     void hideTrayIconChanged(bool);
+<<<<<<< HEAD
     void setReserveBalance(CAmount);
 
 public Q_SLOTS:
     void updateReservedBalance(CAmount reservedBalance);
+=======
+    void zeroBalanceAddressTokenChanged(bool);
+>>>>>>> project-a/time/qtumcore0.21
 };
 
 #endif // BITCOIN_QT_OPTIONSMODEL_H

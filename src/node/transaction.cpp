@@ -64,7 +64,7 @@ TransactionError BroadcastTransaction(NodeContext& node, const CTransactionRef t
         }
         // Try to submit the transaction to the mempool.
         if (!AcceptToMemoryPool(*node.mempool, state, tx,
-                nullptr /* plTxnReplaced */, false /* bypass_limits */)) {
+                nullptr /* plTxnReplaced */, false /* bypass_limits */, false, nullptr)) {
             return HandleATMPError(state, err_string);
         }
 

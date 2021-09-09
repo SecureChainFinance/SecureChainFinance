@@ -9,4 +9,8 @@ if RECENT_TAG="$(git describe --exact-match HEAD)"; then
 else
     VERSION="$(git rev-parse --short=12 HEAD)"
 fi
+<<<<<<< HEAD
 DISTNAME="particl-${VERSION}"
+=======
+DISTNAME="qtum-${VERSION}"
+>>>>>>> project-a/time/qtumcore0.21

@@ -19,7 +19,11 @@ Then install [Homebrew](https://brew.sh).
 
 ## Dependencies
 ```shell
+<<<<<<< HEAD
 brew install automake libtool boost miniupnpc pkg-config python qt libevent qrencode protobuf hidapi
+=======
+brew install cmake automake berkeley-db4 libtool boost --c++11 --without-single --without-static miniupnpc pkg-config protobuf python qt libevent qrencode gmp
+>>>>>>> project-a/time/qtumcore0.21
 ```
 
 If you run into issues, check [Homebrew's troubleshooting page](https://docs.brew.sh/Troubleshooting).
@@ -27,7 +31,7 @@ See [dependencies.md](dependencies.md) for a complete overview.
 
 If you want to build the disk image with `make deploy` (.dmg / optional), you need RSVG:
 ```shell
-brew install librsvg
+brew imagemagick --with-librsvg
 ```
 
 The wallet support requires one or both of the dependencies ([*SQLite*](#sqlite) and [*Berkeley DB*](#berkeley-db)) in the sections below.
@@ -62,6 +66,7 @@ Also, the Homebrew package could be installed:
 brew install berkeley-db4
 ```
 
+<<<<<<< HEAD
 ## Build Particl Core
 
 1. Clone the Particl Core source code:
@@ -73,6 +78,19 @@ brew install berkeley-db4
 2.  Build Particl Core:
 
     Configure and build the headless Particl Core binaries as well as the GUI (if Qt is found).
+=======
+## Build Qtum Core
+
+1. Clone the Qtum Core source code:
+    ```shell
+    git clone --recursive https://github.com/qtumproject/qtum.git
+    cd qtum
+    ```
+
+2.  Build Qtum Core:
+
+    Configure and build the headless Qtum Core binaries as well as the GUI (if Qt is found).
+>>>>>>> project-a/time/qtumcore0.21
 
     You can disable the GUI build by passing `--without-gui` to configure.
     ```shell
@@ -103,6 +121,7 @@ In this case there is no dependency on [*Berkeley DB*](#berkeley-db) and [*SQLit
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
+<<<<<<< HEAD
 Particl Core is now available at `./src/particld`
 
 Before running, you may create an empty configuration file:
@@ -115,18 +134,42 @@ chmod 600 "/Users/${USER}/Library/Application Support/Particl/particl.conf"
 ```
 
 The first time you run particld, it will start downloading the blockchain. This process could
+=======
+Qtum Core is now available at `./src/qtumd`
+
+Before running, you may create an empty configuration file:
+```shell
+mkdir -p "/Users/${USER}/Library/Application Support/Qtum"
+
+touch "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+
+chmod 600 "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+```
+
+The first time you run qtumd, it will start downloading the blockchain. This process could
+>>>>>>> project-a/time/qtumcore0.21
 take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 ```shell
+<<<<<<< HEAD
 tail -f $HOME/Library/Application\ Support/Particl/debug.log
+=======
+tail -f $HOME/Library/Application\ Support/Qtum/debug.log
+>>>>>>> project-a/time/qtumcore0.21
 ```
 
 ## Other commands:
 ```shell
+<<<<<<< HEAD
 ./src/particld -daemon      # Starts the particl daemon.
 ./src/particl-cli --help    # Outputs a list of command-line options.
 ./src/particl-cli help      # Outputs a list of RPC commands when the daemon is running.
+=======
+./src/qtumd -daemon      # Starts the qtum daemon.
+./src/qtum-cli --help    # Outputs a list of command-line options.
+./src/qtum-cli help      # Outputs a list of RPC commands when the daemon is running.
+>>>>>>> project-a/time/qtumcore0.21
 ```
 
 ## Notes

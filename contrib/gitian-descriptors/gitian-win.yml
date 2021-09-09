@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 name: "particl-win-0.21.1.2"
+=======
+name: "qtum-core-win-0.21"
+>>>>>>> project-a/time/qtumcore0.21
 enable_cache: true
 sudo: true
 distro: "ubuntu"
@@ -24,11 +28,23 @@ packages:
 - "ca-certificates"
 - "python3"
 remotes:
+<<<<<<< HEAD
 - "url": "https://github.com/particl/particl-core.git"
   "dir": "particl-core"
+=======
+- "url": "https://github.com/qtumproject/qtum.git"
+  "dir": "qtum"
+- "url": "https://github.com/qtumproject/cpp-eth-qtum.git"
+  "dir": "cpp-eth-qtum"
+>>>>>>> project-a/time/qtumcore0.21
 files: []
 script: |
   set -e -o pipefail
+
+  #this is a hack since gitian has no natural support for submodules
+  cp -r cpp-eth-qtum/* qtum/src/cpp-ethereum
+  #make sure this file exists... 
+  cat qtum/src/cpp-ethereum/utils/libscrypt/b64.c
 
   WRAP_DIR=$HOME/wrapped
   HOSTS="i686-w64-mingw32 x86_64-w64-mingw32"
@@ -98,7 +114,11 @@ script: |
   create_per-host_compiler_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
+<<<<<<< HEAD
   cd particl-core
+=======
+  cd qtum
+>>>>>>> project-a/time/qtumcore0.21
   BASEPREFIX="${PWD}/depends"
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -147,7 +167,11 @@ script: |
     esac
 
     make install DESTDIR=${INSTALLPATH}
+<<<<<<< HEAD
 
+=======
+    cp -f --target-directory="${OUTDIR}" ./qtum-*-setup-unsigned.exe
+>>>>>>> project-a/time/qtumcore0.21
     cd installed
     mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
     find . -name "lib*.la" -delete

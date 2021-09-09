@@ -85,12 +85,20 @@
     </message>
     <message>
         <location line="+7"/>
+<<<<<<< HEAD
         <source>These are your Particl addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+=======
+        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
+<<<<<<< HEAD
         <source>These are your Particl addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.
+=======
+        <source>These are your Qtum addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.
+>>>>>>> project-a/time/qtumcore0.21
 Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -229,7 +237,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+1"/>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PARTICL&lt;/b&gt;!</source>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -254,8 +266,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+57"/>
         <source>Remember that encrypting your wallet cannot fully protect your particl from being stolen by malware infecting your computer.</source>
+=======
+        <location line="+55"/>
+        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -341,9 +358,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>QtumGUI</name>
     <message>
+<<<<<<< HEAD
         <location filename="../bitcoingui.cpp" line="+327"/>
+=======
+        <location filename="../qtumgui.cpp" line="+322"/>
+>>>>>>> project-a/time/qtumcore0.21
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -483,9 +504,15 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-1175"/>
         <source>Send coins to a Particl address</source>
         <translation>Send coins to a Particl address</translation>
+=======
+        <location line="-1065"/>
+        <source>Send coins to a Qtum address</source>
+        <translation>Send coins to a Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+67"/>
@@ -529,6 +556,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+7"/>
+<<<<<<< HEAD
         <source>Sign messages with your Particl addresses to prove you own them</source>
         <translation>Sign messages with your Particl addresses to prove you own them</translation>
     </message>
@@ -536,6 +564,15 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <location line="+2"/>
         <source>Verify messages to ensure they were signed with specified Particl addresses</source>
         <translation>Verify messages to ensure they were signed with specified Particl addresses</translation>
+=======
+        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <translation>Sign messages with your Qtum addresses to prove you own them</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Qtum addresses</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+136"/>
@@ -558,8 +595,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation>Tabs toolbar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-291"/>
         <source>Request payments (generates QR codes and particl: URIs)</source>
+=======
+        <location line="-281"/>
+        <source>Request payments (generates QR codes and qtum: URIs)</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -578,11 +620,19 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <location line="+614"/>
         <source>%n active connection(s) to Particl network</source>
         <translation>
             <numerusform>%n active connection to Particl network</numerusform>
             <numerusform>%n active connections to Particl network</numerusform>
+=======
+        <location line="+556"/>
+        <source>%n active connection(s) to Qtum network</source>
+        <translation>
+            <numerusform>%n active connection to Qtum network</numerusform>
+            <numerusform>%n active connections to Qtum network</numerusform>
+>>>>>>> project-a/time/qtumcore0.21
         </translation>
     </message>
     <message>
@@ -645,7 +695,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+1"/>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction</source>
+=======
+        <source>Load Partially Signed Qtum Transaction</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -655,7 +709,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+1"/>
+<<<<<<< HEAD
         <source>Load Partially Signed Particl Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -679,7 +737,16 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+6"/>
+=======
+        <location line="+4"/>
+        <source>Open a qtum: URI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+>>>>>>> project-a/time/qtumcore0.21
         <source>Open Wallet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -710,12 +777,16 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+4"/>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Particl command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;HD Wallet...</source>
+=======
+        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -870,7 +941,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../bitcoin.cpp" line="+425"/>
+=======
+        <location filename="../qtum.cpp" line="+419"/>
+>>>>>>> project-a/time/qtumcore0.21
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1287,8 +1362,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+88"/>
         <source>The entered address &quot;%1&quot; is not a valid Particl address.</source>
+=======
+        <location line="+77"/>
+        <source>The entered address &quot;%1&quot; is not a valid Qtum address.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1412,8 +1492,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location filename="../intro.cpp" line="+32"/>
+<<<<<<< HEAD
         <source>Particl</source>
         <translation type="unfinished">Particl</translation>
+=======
+        <source>Qtum</source>
+        <translation type="unfinished">Qtum</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+8"/>
@@ -1432,7 +1517,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+4"/>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Particl block chain.</source>
+=======
+        <source>%1 will download and store a copy of the Qtum block chain.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1478,6 +1567,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
 <context>
     <name>MnemonicDialog</name>
     <message>
+<<<<<<< HEAD
         <location filename="../forms/mnemonicdialog.ui" line="+14"/>
         <source>HD Wallet Setup</source>
         <translation type="unfinished"></translation>
@@ -1488,6 +1578,15 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <location line="+234"/>
         <location filename="../mnemonicdialog.cpp" line="+106"/>
         <source>Import</source>
+=======
+        <location line="+119"/>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1548,8 +1647,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+7"/>
         <source>This is your randomly generated Recovery Phrase/Mnemonic</source>
+=======
+        <location filename="../forms/openuridialog.ui" line="+14"/>
+        <source>Open qtum URI</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1943,8 +2047,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+30"/>
+<<<<<<< HEAD
         <source>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automatically open the Particl client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+=======
+        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+3"/>
@@ -1963,7 +2072,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+7"/>
+<<<<<<< HEAD
         <source>Connect to the Particl network through a SOCKS5 proxy.</source>
+=======
+        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2060,8 +2173,13 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+270"/>
         <source>Connect to the Particl network through a separate SOCKS5 proxy for Tor onion services.</source>
+=======
+        <location line="+250"/>
+        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2155,9 +2273,15 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+62"/>
+<<<<<<< HEAD
         <location line="+547"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</source>
         <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Particl network after a connection is established, but this process has not completed yet.</translation>
+=======
+        <location line="+394"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="-253"/>
@@ -2448,7 +2572,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+1"/>
+<<<<<<< HEAD
         <source>Cannot start particl: click-to-pay handler</source>
+=======
+        <source>Cannot start qtum: click-to-pay handler</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2461,7 +2589,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="-26"/>
+<<<<<<< HEAD
         <source>&apos;particl://&apos; is not a valid URI. Use &apos;particl:&apos; instead.</source>
+=======
+        <source>&apos;qtum://&apos; is not a valid URI. Use &apos;qtum:&apos; instead.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2489,7 +2621,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+8"/>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Particl address or malformed URI parameters.</source>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2534,13 +2670,17 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoinunits.cpp" line="+209"/>
+        <location filename="../qtumunits.cpp" line="+209"/>
         <source>Amount</source>
         <translation type="unfinished">Amount</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+108"/>
+<<<<<<< HEAD
         <source>Enter a Particl address (e.g. %1)</source>
+=======
+        <source>Enter a Qtum address (e.g. %1)</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2654,7 +2794,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+112"/>
+        <location filename="../qtum.cpp" line="+112"/>
         <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3175,7 +3315,11 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="-3"/>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Particl network.</source>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3586,7 +3730,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+86"/>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for particl transactions than the network can process.</source>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3685,7 +3833,16 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+182"/>
+=======
+        <location line="+1"/>
+        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+90"/>
+>>>>>>> project-a/time/qtumcore0.21
         <source> from wallet &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3740,8 +3897,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+15"/>
         <source>Estimated Transaction fee</source>
+=======
+        <location line="-24"/>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3843,8 +4005,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+107"/>
         <source>Warning: Invalid Particl address</source>
+=======
+        <location line="+100"/>
+        <source>Warning: Invalid Qtum address</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3895,6 +4062,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-394"/>
         <location line="+369"/>
         <source>Narration:</source>
@@ -3903,6 +4071,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     <message>
         <location line="-325"/>
         <source>The Particl address to send the payment to</source>
+=======
+        <location line="-7"/>
+        <source>The Qtum address to send the payment to</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3941,8 +4113,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+7"/>
+<<<<<<< HEAD
         <location line="+83"/>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less particl than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4019,8 +4195,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+68"/>
         <source>A message that was attached to the particl: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Particl network.</source>
+=======
+        <location line="+58"/>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4063,12 +4244,20 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+6"/>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your addresses to prove you can receive particl sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+=======
+        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
+<<<<<<< HEAD
         <source>The Particl address to sign the message with</source>
+=======
+        <source>The Qtum address to sign the message with</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4111,8 +4300,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Particl address</source>
         <translation>Sign the message to prove you own this Particl address</translation>
+=======
+        <source>Sign the message to prove you own this Qtum address</source>
+        <translation>Sign the message to prove you own this Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+3"/>
@@ -4142,7 +4336,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
+<<<<<<< HEAD
         <source>The Particl address the message was signed with</source>
+=======
+        <source>The Qtum address the message was signed with</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4159,8 +4357,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+9"/>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Particl address</source>
         <translation>Verify the message to ensure it was signed with the specified Particl address</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <translation>Verify the message to ensure it was signed with the specified Qtum address</translation>
+>>>>>>> project-a/time/qtumcore0.21
     </message>
     <message>
         <location line="+3"/>
@@ -4898,7 +5101,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+40"/>
+        <location filename="../qtumgui.cpp" line="+40"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5105,9 +5308,9 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>qtum-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+27"/>
+        <location filename="../qtumstrings.cpp" line="+27"/>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5483,7 +5686,11 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
     <message>
         <location line="-20"/>
+<<<<<<< HEAD
         <source>%s corrupt. Try using the wallet tool particl-wallet to salvage or restoring a backup.</source>
+=======
+        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
+>>>>>>> project-a/time/qtumcore0.21
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5952,6 +6159,29 @@ Go to File &gt; Open Wallet to load a wallet.
         <location line="-58"/>
         <source>Done loading</source>
         <translation>Done loading</translation>
+    </message>
+</context>
+<context>
+    <name>RestoreDialog</name>
+    <message>
+        <source>Rebuild blockchain index</source>
+        <translation>rescan – rescan the blockchain for missing transactions.
+          Fixes missing transactions, low balance.</translation>
+    </message>
+    <message>
+        <source>Recover transactions without metadata</source>
+        <translation>zapwallettxes=2 - recover transactions without metadata.
+          Fixes problems with missing transactions, low balance, orphan blocks, and split chains.
+          Backup your wallet again after running this command.</translation>
+    </message>
+    <message>
+        <source>Delete the local copy of the block chain</source>
+        <translation>delete blockchain data - delete the local copy of the blockchain, resync the entire blockchain.
+          Fixes problems syncing the blockchain, corrupted blockchains, and split chains.</translation>
+    </message>
+    <message>
+        <source>The wallet.dat will be restored from the selected location and the Qt Wallet will be restarted with the -reindex, -zapwallettxes=2 or -deleteblockchaindata option.</source>
+        <translation>Backup your wallet first, requires client restart after selecting option.</translation>
     </message>
 </context>
 </TS>

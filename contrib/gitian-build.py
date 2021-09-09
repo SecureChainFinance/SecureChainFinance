@@ -26,6 +26,7 @@ def setup():
         programs += ['apt-cacher-ng', 'lxc', 'debootstrap']
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs'):
+<<<<<<< HEAD
         subprocess.check_call(['git', 'clone', 'https://github.com/particl/gitian.sigs.git'])
     if not os.path.isdir('particl-detached-sigs'):
         subprocess.check_call(['git', 'clone', 'https://github.com/particl/particl-detached-sigs.git'])
@@ -33,6 +34,15 @@ def setup():
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
     if not os.path.isdir('particl-core'):
         subprocess.check_call(['git', 'clone', 'https://github.com/particl/particl-core.git'])
+=======
+        subprocess.check_call(['git', 'clone', 'https://github.com/qtumproject/gitian.sigs.git'])
+    if not os.path.isdir('qtum-detached-sigs'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/qtumproject/qtum-detached-sigs.git'])
+    if not os.path.isdir('gitian-builder'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
+    if not os.path.isdir('qtum'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/qtumproject/qtum.git'])
+>>>>>>> project-a/time/qtumcore0.21
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64', '--disksize', '20000']
     if args.docker:
@@ -49,13 +59,18 @@ def setup():
 def build():
     global args, workdir
 
+<<<<<<< HEAD
     os.makedirs('particl-binaries/' + args.version, exist_ok=True)
+=======
+    os.makedirs('qtum-binaries/' + args.version, exist_ok=True)
+>>>>>>> project-a/time/qtumcore0.21
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
 
     subprocess.check_call(['wget', '-O', 'inputs/osslsigncode-2.0.tar.gz', 'https://github.com/mtrojnar/osslsigncode/archive/2.0.tar.gz'])
     subprocess.check_call(["echo '5a60e0a4b3e0b4d655317b2f12a810211c50242138322b16e7e01c6fbb89d92f inputs/osslsigncode-2.0.tar.gz' | sha256sum -c"], shell=True)
+<<<<<<< HEAD
     subprocess.check_call(['make', '-C', '../particl-core/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
 
     if args.linux:
@@ -77,6 +92,29 @@ def build():
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../particl-core/contrib/gitian-descriptors/gitian-osx.yml'])
         subprocess.check_call('mv build/out/particl-*-osx-unsigned.tar.gz inputs/', shell=True)
         subprocess.check_call('mv build/out/particl-*.tar.gz build/out/particl-*.dmg build/out/src/particl-*.tar.gz ../particl-binaries/'+args.version, shell=True)
+=======
+    subprocess.check_call(['make', '-C', '../qtum/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
+
+    if args.linux:
+        print('\nCompiling ' + args.version + ' Linux')
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'qtum='+args.commit+',cpp-eth-qtum=develop', '--url', 'qtum='+args.url, '../qtum/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../qtum/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call('mv build/out/qtum-*.tar.gz build/out/src/qtum-*.tar.gz ../qtum-binaries/'+args.version, shell=True)
+
+    if args.windows:
+        print('\nCompiling ' + args.version + ' Windows')
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'qtum='+args.commit+',cpp-eth-qtum=develop', '--url', 'qtum='+args.url, '../qtum/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../qtum/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call('mv build/out/qtum-*-win-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/qtum-*.zip build/out/qtum-*.exe build/out/src/qtum-*.tar.gz ../qtum-binaries/'+args.version, shell=True)
+
+    if args.macos:
+        print('\nCompiling ' + args.version + ' MacOS')
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'qtum='+args.commit+',cpp-eth-qtum=develop', '--url', 'qtum='+args.url, '../qtum/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../qtum/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call('mv build/out/qtum-*-osx-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/qtum-*.tar.gz build/out/qtum-*.dmg build/out/src/qtum-*.tar.gz ../qtum-binaries/'+args.version, shell=True)
+>>>>>>> project-a/time/qtumcore0.21
 
     os.chdir(workdir)
 
@@ -95,6 +133,7 @@ def sign():
 
     if args.windows:
         print('\nSigning ' + args.version + ' Windows')
+<<<<<<< HEAD
         subprocess.check_call('cp inputs/particl-' + args.version + '-win-unsigned.tar.gz inputs/particl-win-unsigned.tar.gz', shell=True)
         subprocess.check_call(['bin/gbuild', '--skip-image', '--upgrade', '--commit', 'signature='+args.commit, '../particl-core/contrib/gitian-descriptors/gitian-win-signer.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../particl-core/contrib/gitian-descriptors/gitian-win-signer.yml'])
@@ -107,6 +146,19 @@ def sign():
         subprocess.check_call(['bin/gbuild', '--skip-image', '--upgrade', '--commit', 'signature='+args.commit, '../particl-core/contrib/gitian-descriptors/gitian-osx-signer.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../particl-core/contrib/gitian-descriptors/gitian-osx-signer.yml'])
         subprocess.check_call('mv build/out/particl-osx-signed.dmg ../particl-binaries/'+args.version+'/particl-'+args.version+'-osx.dmg', shell=True)
+=======
+        subprocess.check_call('cp inputs/qtum-' + args.version + '-win-unsigned.tar.gz inputs/qtum-win-unsigned.tar.gz', shell=True)
+        subprocess.check_call(['bin/gbuild', '--skip-image', '--upgrade', '--commit', 'signature='+args.commit, '../qtum/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../qtum/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call('mv build/out/qtum-*win64-setup.exe ../qtum-binaries/'+args.version, shell=True)
+
+    if args.macos:
+        print('\nSigning ' + args.version + ' MacOS')
+        subprocess.check_call('cp inputs/qtum-' + args.version + '-osx-unsigned.tar.gz inputs/qtum-osx-unsigned.tar.gz', shell=True)
+        subprocess.check_call(['bin/gbuild', '--skip-image', '--upgrade', '--commit', 'signature='+args.commit, '../qtum/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../qtum/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call('mv build/out/qtum-osx-signed.dmg ../qtum-binaries/'+args.version+'/qtum-'+args.version+'-osx.dmg', shell=True)
+>>>>>>> project-a/time/qtumcore0.21
 
     os.chdir(workdir)
 
@@ -124,27 +176,47 @@ def verify():
     os.chdir('gitian-builder')
 
     print('\nVerifying v'+args.version+' Linux\n')
+<<<<<<< HEAD
     if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../particl-core/contrib/gitian-descriptors/gitian-linux.yml']):
+=======
+    if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../qtum/contrib/gitian-descriptors/gitian-linux.yml']):
+>>>>>>> project-a/time/qtumcore0.21
         print('Verifying v'+args.version+' Linux FAILED\n')
         rc = 1
 
     print('\nVerifying v'+args.version+' Windows\n')
+<<<<<<< HEAD
     if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../particl-core/contrib/gitian-descriptors/gitian-win.yml']):
+=======
+    if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../qtum/contrib/gitian-descriptors/gitian-win.yml']):
+>>>>>>> project-a/time/qtumcore0.21
         print('Verifying v'+args.version+' Windows FAILED\n')
         rc = 1
 
     print('\nVerifying v'+args.version+' MacOS\n')
+<<<<<<< HEAD
     if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../particl-core/contrib/gitian-descriptors/gitian-osx.yml']):
+=======
+    if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../qtum/contrib/gitian-descriptors/gitian-osx.yml']):
+>>>>>>> project-a/time/qtumcore0.21
         print('Verifying v'+args.version+' MacOS FAILED\n')
         rc = 1
 
     print('\nVerifying v'+args.version+' Signed Windows\n')
+<<<<<<< HEAD
     if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../particl-core/contrib/gitian-descriptors/gitian-win-signer.yml']):
+=======
+    if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../qtum/contrib/gitian-descriptors/gitian-win-signer.yml']):
+>>>>>>> project-a/time/qtumcore0.21
         print('Verifying v'+args.version+' Signed Windows FAILED\n')
         rc = 1
 
     print('\nVerifying v'+args.version+' Signed MacOS\n')
+<<<<<<< HEAD
     if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../particl-core/contrib/gitian-descriptors/gitian-osx-signer.yml']):
+=======
+    if subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../qtum/contrib/gitian-descriptors/gitian-osx-signer.yml']):
+>>>>>>> project-a/time/qtumcore0.21
         print('Verifying v'+args.version+' Signed MacOS FAILED\n')
         rc = 1
 
@@ -157,7 +229,11 @@ def main():
     parser = argparse.ArgumentParser(description='Script for running full Gitian builds.')
     parser.add_argument('-c', '--commit', action='store_true', dest='commit', help='Indicate that the version argument is for a commit or branch')
     parser.add_argument('-p', '--pull', action='store_true', dest='pull', help='Indicate that the version argument is the number of a github repository pull request')
+<<<<<<< HEAD
     parser.add_argument('-u', '--url', dest='url', default='https://github.com/particl/particl-core', help='Specify the URL of the repository. Default is %(default)s')
+=======
+    parser.add_argument('-u', '--url', dest='url', default='https://github.com/qtumproject/qtum', help='Specify the URL of the repository. Default is %(default)s')
+>>>>>>> project-a/time/qtumcore0.21
     parser.add_argument('-v', '--verify', action='store_true', dest='verify', help='Verify the Gitian build')
     parser.add_argument('-b', '--build', action='store_true', dest='build', help='Do a Gitian build')
     parser.add_argument('-s', '--sign', action='store_true', dest='sign', help='Make signed binaries for Windows and MacOS')
@@ -231,10 +307,14 @@ def main():
         raise Exception('Cannot have both commit and pull')
     args.commit = ('' if args.commit else 'v') + args.version
 
+<<<<<<< HEAD
     os.chdir('particl-core')
+=======
+    os.chdir('qtum')
+>>>>>>> project-a/time/qtumcore0.21
     if args.pull:
         subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
-        os.chdir('../gitian-builder/inputs/bitcoin')
+        os.chdir('../gitian-builder/inputs/qtum')
         subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
         args.commit = subprocess.check_output(['git', 'show', '-s', '--format=%H', 'FETCH_HEAD'], universal_newlines=True, encoding='utf8').strip()
         args.version = 'pull-' + args.version

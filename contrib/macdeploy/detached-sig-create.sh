@@ -7,7 +7,11 @@ export LC_ALL=C
 set -e
 
 ROOTDIR=dist
+<<<<<<< HEAD
 BUNDLE="${ROOTDIR}/Particl-Qt.app"
+=======
+BUNDLE="${ROOTDIR}/Qtum-Qt.app"
+>>>>>>> project-a/time/qtumcore0.21
 SIGNAPPLE=signapple
 TEMPDIR=sign.temp
 OUT=signature-osx.tar.gz

@@ -102,10 +102,13 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool allow_
 {
     parent->setFocusProxy(widget);
 
-    widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
+<<<<<<< HEAD
     widget->setPlaceholderText(QObject::tr("Enter a Particl address (e.g. %1)").arg(
+=======
+    widget->setPlaceholderText(QObject::tr("Enter a Qtum address (e.g. %1)").arg(
+>>>>>>> project-a/time/qtumcore0.21
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent, allow_stakeonly));
@@ -114,7 +117,11 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool allow_
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
+<<<<<<< HEAD
     if(!uri.isValid() || uri.scheme() != QString("particl"))
+=======
+    if(!uri.isValid() || uri.scheme() != QString("qtum"))
+>>>>>>> project-a/time/qtumcore0.21
         return false;
 
     SendCoinsRecipient rv;
@@ -177,7 +184,12 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
+<<<<<<< HEAD
     QString ret = QString("particl:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+=======
+
+    QString ret = QString("qtum:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+>>>>>>> project-a/time/qtumcore0.21
     int paramCount = 0;
 
     if (info.amount)
@@ -231,6 +243,19 @@ void copyEntryData(const QAbstractItemView *view, int column, int role)
     if(!view || !view->selectionModel())
         return;
     QModelIndexList selection = view->selectionModel()->selectedRows(column);
+
+    if(!selection.isEmpty())
+    {
+        // Copy first item
+        setClipboard(selection.at(0).data(role).toString());
+    }
+}
+
+void copyEntryDataFromList(QAbstractItemView *view, int role)
+{
+    if(!view || !view->selectionModel())
+        return;
+    QModelIndexList selection = view->selectionModel()->selectedIndexes();
 
     if(!selection.isEmpty())
     {
@@ -407,7 +432,7 @@ bool openBitcoinConf()
 
     configFile.close();
 
-    /* Open bitcoin.conf with the associated application */
+    /* Open qtum.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 #ifdef Q_OS_MAC
     // Workaround for macOS-specific behavior; see #15409.
@@ -504,7 +529,9 @@ int TableViewLastColumnResizingFixer::getColumnsWidth()
 
 int TableViewLastColumnResizingFixer::getAvailableWidthForColumn(int column)
 {
-    int nResult = lastColumnMinimumWidth;
+    int nResult = allColumnsMinimumWidth;
+    if(column == lastColumnIndex)
+        nResult = lastColumnMinimumWidth;
     int nTableWidth = tableView->horizontalHeader()->width();
 
     if (nTableWidth > 0)
@@ -566,7 +593,11 @@ void TableViewLastColumnResizingFixer::on_geometriesChanged()
  * Initializes all internal variables and prepares the
  * the resize modes of the last 2 columns of the table and
  */
+<<<<<<< HEAD
 TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* table, int lastColMinimumWidth, int allColsMinimumWidth, QObject *parent, int resizeColumnOffset) :
+=======
+TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* table, int lastColMinimumWidth, int allColsMinimumWidth, QObject *parent, int columnStretch) :
+>>>>>>> project-a/time/qtumcore0.21
     QObject(parent),
     tableView(table),
     lastColumnMinimumWidth(lastColMinimumWidth),
@@ -574,7 +605,11 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 {
     columnCount = tableView->horizontalHeader()->count();
     lastColumnIndex = columnCount - 1;
+<<<<<<< HEAD
     secondToLastColumnIndex = columnCount - resizeColumnOffset;
+=======
+    secondToLastColumnIndex = columnCount - columnStretch;
+>>>>>>> project-a/time/qtumcore0.21
     tableView->horizontalHeader()->setMinimumSectionSize(allColumnsMinimumWidth);
     setViewHeaderResizeMode(secondToLastColumnIndex, QHeaderView::Interactive);
     setViewHeaderResizeMode(lastColumnIndex, QHeaderView::Interactive);
@@ -585,10 +620,17 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
+<<<<<<< HEAD
         return GetSpecialFolderPath(CSIDL_STARTUP) / "Particl.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
         return GetSpecialFolderPath(CSIDL_STARTUP) / "Particl (testnet).lnk";
     return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Particl (%s).lnk", chain);
+=======
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Qtum.lnk";
+    if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Qtum (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Qtum (%s).lnk", chain);
+>>>>>>> project-a/time/qtumcore0.21
 }
 
 bool GetStartOnSystemStartup()
@@ -668,8 +710,13 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
+<<<<<<< HEAD
         return GetAutostartDir() / "particl.desktop";
     return GetAutostartDir() / strprintf("particl-%s.desktop", chain);
+=======
+        return GetAutostartDir() / "qtum.desktop";
+    return GetAutostartDir() / strprintf("qtum-%s.desktop", chain);
+>>>>>>> project-a/time/qtumcore0.21
 }
 
 bool GetStartOnSystemStartup()
@@ -713,9 +760,15 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
+<<<<<<< HEAD
             optionFile << "Name=Particl\n";
         else
             optionFile << strprintf("Name=Particl (%s)\n", chain);
+=======
+            optionFile << "Name=Qtum\n";
+        else
+            optionFile << strprintf("Name=Qtum (%s)\n", chain);
+>>>>>>> project-a/time/qtumcore0.21
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", chain);
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -919,6 +972,7 @@ void PopupMenu(QMenu* menu, const QPoint& point, QAction* at_action)
     menu->popup(point, at_action);
 }
 
+<<<<<<< HEAD
 namespace particl
 {
     QString escapeQString(const QString& si)
@@ -933,4 +987,28 @@ namespace particl
         return sr;
     }
 }
+=======
+void formatToolButtons(QToolButton *btn1, QToolButton *btn2, QToolButton *btn3)
+{
+    QList<QToolButton *> btnList;
+    if(btn1) btnList.append(btn1);
+    if(btn2) btnList.append(btn2);
+    if(btn3) btnList.append(btn3);
+    for(int i = 0; i < btnList.count(); i++)
+    {
+        QToolButton* btn = btnList[i];
+        btn->setIconSize(QSize(16, 16));
+    }
+}
+
+QString cutString(const QString &text, int length)
+{
+    if(text.length() > length + 3)
+    {
+        return text.left(length) + "...";
+    }
+    return text;
+}
+
+>>>>>>> project-a/time/qtumcore0.21
 } // namespace GUIUtil

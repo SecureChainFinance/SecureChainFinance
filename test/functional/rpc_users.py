@@ -64,11 +64,19 @@ class HTTPBasicsTest(BitcoinTestFramework):
         rpcauth3 = lines[1]
         self.password = lines[3]
 
+<<<<<<< HEAD
         with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "particl.conf"), 'a', encoding='utf8') as f:
             f.write(rpcauth + "\n")
             f.write(rpcauth2 + "\n")
             f.write(rpcauth3 + "\n")
         with open(os.path.join(get_datadir_path(self.options.tmpdir, 1), "particl.conf"), 'a', encoding='utf8') as f:
+=======
+        with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "qtum.conf"), 'a', encoding='utf8') as f:
+            f.write(rpcauth + "\n")
+            f.write(rpcauth2 + "\n")
+            f.write(rpcauth3 + "\n")
+        with open(os.path.join(get_datadir_path(self.options.tmpdir, 1), "qtum.conf"), 'a', encoding='utf8') as f:
+>>>>>>> project-a/time/qtumcore0.21
             f.write("rpcuser={}\n".format(self.rpcuser))
             f.write("rpcpassword={}\n".format(self.rpcpassword))
 

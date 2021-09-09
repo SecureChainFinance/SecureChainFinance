@@ -7,9 +7,11 @@
 
 #include <qt/addresstablemodel.h>
 #include <qt/guiutil.h>
+#include <qt/styleSheet.h>
 
 #include <QDataWidgetMapper>
 #include <QMessageBox>
+#include <QPushButton>
 
 
 EditAddressDialog::EditAddressDialog(Mode _mode, QWidget *parent) :
@@ -20,6 +22,9 @@ EditAddressDialog::EditAddressDialog(Mode _mode, QWidget *parent) :
     model(nullptr)
 {
     ui->setupUi(this);
+
+    SetObjectStyleSheet(ui->buttonBox->button(QDialogButtonBox::Cancel), StyleSheetNames::ButtonLight);
+    SetObjectStyleSheet(ui->buttonBox->button(QDialogButtonBox::Ok), StyleSheetNames::ButtonGray);
 
     GUIUtil::setupAddressWidget(ui->addressEdit, this);
 
@@ -135,7 +140,11 @@ void EditAddressDialog::accept()
             break;
         case AddressTableModel::INVALID_ADDRESS:
             QMessageBox::warning(this, windowTitle(),
+<<<<<<< HEAD
                 tr("The entered address \"%1\" is not a valid Particl address.").arg(ui->addressEdit->text()),
+=======
+                tr("The entered address \"%1\" is not a valid Qtum address.").arg(ui->addressEdit->text()),
+>>>>>>> project-a/time/qtumcore0.21
                 QMessageBox::Ok, QMessageBox::Ok);
             break;
         case AddressTableModel::DUPLICATE_ADDRESS:

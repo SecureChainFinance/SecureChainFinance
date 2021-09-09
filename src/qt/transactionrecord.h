@@ -81,11 +81,16 @@ public:
         RecvWithAddress,
         RecvFromOther,
         SendToSelf,
+<<<<<<< HEAD
         Staked
+=======
+        ContractRecv,
+        ContractSend
+>>>>>>> project-a/time/qtumcore0.21
     };
 
     /** Number of confirmation recommended for accepting a transaction */
-    static const int RecommendedNumConfirmations = 6;
+    static const int RecommendedNumConfirmations = 10;
 
     TransactionRecord():
             hash(), time(0), type(Other), address(""), debit(0), credit(0),
@@ -109,7 +114,7 @@ public:
 
     /** Decompose CWallet transaction to model transaction records.
      */
-    static bool showTransaction();
+    static bool showTransaction(const interfaces::WalletTx& wtx);
     static QList<TransactionRecord> decomposeTransaction(const interfaces::WalletTx& wtx);
 
     /** @name Immutable transaction attributes

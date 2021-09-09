@@ -9,23 +9,77 @@
 #include <amount.h>
 #include <rpc/request.h>
 #include <rpc/util.h>
+#include <uint256.h>
 
 #include <functional>
 #include <map>
 #include <stdint.h>
 #include <string>
+#include <functional>
+#include <condition_variable>
+#include <mutex>
 
 #include <univalue.h>
+#include <util/system.h>
 
 static const unsigned int DEFAULT_RPC_SERIALIZE_VERSION = 1;
 
+struct CUpdatedBlock
+{
+    uint256 hash;
+    int height;
+};
+
+static Mutex cs_blockchange;
+static std::condition_variable cond_blockchange;
+static CUpdatedBlock latestblock GUARDED_BY(cs_blockchange);
+
 class CRPCCommand;
+class HTTPRequest;
 
 namespace RPCServer
 {
     void OnStarted(std::function<void ()> slot);
     void OnStopped(std::function<void ()> slot);
 }
+
+class JSONRPCRequestLong : public JSONRPCRequest
+{
+public:
+    JSONRPCRequestLong(const util::Ref& context) : JSONRPCRequest(context) {};
+
+    JSONRPCRequestLong(const util::Ref& context, HTTPRequest *_req);
+
+    /**
+     * Start long-polling
+     */
+    void PollStart();
+
+    /**
+     * Ping long-poll connection with an empty character to make sure it's still alive.
+     */
+    void PollPing();
+
+    /**
+     * Returns whether the underlying long-poll connection is still alive.
+     */
+    bool PollAlive();
+
+    /**
+     * End a long poll request.
+     */
+    void PollCancel();
+
+    /**
+     * Return the JSON result of a long poll request
+     */
+    void PollReply(const UniValue& result);
+
+    /**
+     * Return the http request
+     */
+     HTTPRequest* req();
+};
 
 /** Query whether RPC is running */
 bool IsRPCRunning();
@@ -177,6 +231,10 @@ public:
 bool IsDeprecatedRPCEnabled(const std::string& method);
 
 extern CRPCTable tableRPC;
+
+extern double GetPoWMHashPS();
+extern double GetPoSKernelPS();
+extern double GetEstimatedAnnualROI();
 
 void StartRPC();
 void InterruptRPC();

@@ -8,12 +8,16 @@
 #include <primitives/transaction.h>
 #include <script/interpreter.h>
 #include <consensus/validation.h>
+<<<<<<< HEAD
 #include <validation.h>
 #include <consensus/params.h>
 #include <chainparams.h>
 
 #include <timedata.h>
 #include <util/system.h>
+=======
+#include <chainparams.h>
+>>>>>>> project-a/time/qtumcore0.21
 
 // TODO remove the following dependencies
 #include <chain.h>
@@ -281,6 +285,7 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, TxValidationState& state, 
         const Coin& coin = inputs.AccessCoin(prevout);
         assert(!coin.IsSpent());
 
+<<<<<<< HEAD
         // If prev is coinbase or coinstake, check that it's matured
         if (coin.IsCoinBase())
         {
@@ -298,6 +303,12 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, TxValidationState& state, 
                 return state.Invalid(TxValidationResult::TX_PREMATURE_SPEND, "bad-txns-premature-spend-of-coinbase",
                     strprintf("tried to spend coinbase or coinstake at depth %d", nSpendHeight - coin.nHeight));
             }
+=======
+        // If prev is coinbase, check that it's matured
+        if ((coin.IsCoinBase() || coin.IsCoinStake()) && nSpendHeight - coin.nHeight < ::Params().GetConsensus().CoinbaseMaturity(nSpendHeight)) {
+            return state.Invalid(TxValidationResult::TX_PREMATURE_SPEND, "bad-txns-premature-spend-of-coinbase",
+                strprintf("tried to spend coinbase at depth %d", nSpendHeight - coin.nHeight));
+>>>>>>> project-a/time/qtumcore0.21
         }
 
         // Check for negative or overflow input values
@@ -521,6 +532,7 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, TxValidationState& state, 
         }
     }
 
+<<<<<<< HEAD
     return true;
 }
 
@@ -759,6 +771,23 @@ bool CheckTransaction(const CTransaction& tx, TxValidationState &state)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-prevout-null");
             }
         }
+=======
+    if (!tx.IsCoinStake())
+    {
+        const CAmount value_out = tx.GetValueOut();
+        if (nValueIn < value_out) {
+            return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-in-belowout",
+                strprintf("value in (%s) < value out (%s)", FormatMoney(nValueIn), FormatMoney(value_out)));
+        }
+
+        // Tally transaction fees
+        const CAmount txfee_aux = nValueIn - value_out;
+        if (!MoneyRange(txfee_aux)) {
+            return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-fee-outofrange");
+        }
+
+        txfee = txfee_aux;
+>>>>>>> project-a/time/qtumcore0.21
     }
 
     return true;

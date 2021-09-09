@@ -2,7 +2,11 @@ OpenBSD build guide
 ======================
 (updated for OpenBSD 6.7)
 
+<<<<<<< HEAD
 This guide describes how to build particld, particl-qt, and command-line utilities on OpenBSD.
+=======
+This guide describes how to build qtumd, qtum-qt, and command-line utilities on OpenBSD.
+>>>>>>> project-a/time/qtumcore0.21
 
 Preparation
 -------------
@@ -10,13 +14,17 @@ Preparation
 Run the following as root to install the base dependencies for building:
 
 ```bash
-pkg_add git gmake libevent libtool boost
+pkg_add git gmake libevent libtool boost gmp
 pkg_add qt5 # (optional for enabling the GUI)
 pkg_add autoconf # (select highest version, e.g. 2.69)
 pkg_add automake # (select highest version, e.g. 1.16)
 pkg_add python # (select highest version, e.g. 3.8)
 
+<<<<<<< HEAD
 git clone https://github.com/particl/particl-core.git
+=======
+git clone https://github.com/qtumproject/qtum --recursive
+>>>>>>> project-a/time/qtumcore0.21
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
@@ -47,7 +55,11 @@ from the root of the repository. Then set `BDB_PREFIX` for the next section:
 export BDB_PREFIX="$PWD/db4"
 ```
 
+<<<<<<< HEAD
 ### Building Particl Core
+=======
+### Building Qtum Core
+>>>>>>> project-a/time/qtumcore0.21
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

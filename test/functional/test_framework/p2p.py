@@ -110,9 +110,15 @@ MESSAGEMAP = {
 }
 
 MAGIC_BYTES = {
+<<<<<<< HEAD
     "mainnet": b"\xfb\xf2\xef\xb4",   # mainnet
     "testnet3": b"\x08\x11\x05\x0b",  # testnet3
     "regtest": b"\x09\x12\x06\x0c",   # regtest
+=======
+    "mainnet": b"\xf9\xbe\xb4\xd9",   # mainnet
+    "testnet3": b"\x0b\x11\x09\x07",  # testnet3
+    "regtest": b"\xfd\xdd\xc6\xe1",   # regtest
+>>>>>>> project-a/time/qtumcore0.21
     "signet": b"\x0a\x03\xcf\x40",    # signet
 }
 

@@ -29,16 +29,27 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
+<<<<<<< HEAD
   <string>Particl-Qt</string>
 
   <key>CFBundleName</key>
   <string>Particl-Qt</string>
+=======
+  <string>Qtum-Qt</string>
+
+  <key>CFBundleName</key>
+  <string>Qtum-Qt</string>
+>>>>>>> project-a/time/qtumcore0.21
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
+<<<<<<< HEAD
   <string>io.particlfoundation.Particl-Qt</string>
+=======
+  <string>org.qtumproject.Qtum-Qt</string>
+>>>>>>> project-a/time/qtumcore0.21
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +57,17 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
+<<<<<<< HEAD
       <string>org.particl.ParticlPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>particl</string>
+=======
+      <string>org.qtum.QtumPayment</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>qtum</string>
+>>>>>>> project-a/time/qtumcore0.21
       </array>
     </dict>
   </array>

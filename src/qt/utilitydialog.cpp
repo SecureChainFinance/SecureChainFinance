@@ -58,7 +58,11 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, bool about) :
         ui->helpMessage->setVisible(false);
     } else {
         setWindowTitle(tr("Command-line options"));
+<<<<<<< HEAD
         QString header = "Usage:  particl-qt [command-line options]                     \n";
+=======
+        QString header = "Usage:  qtum-qt [command-line options]                     \n";
+>>>>>>> project-a/time/qtumcore0.21
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();
@@ -155,6 +159,7 @@ QWidget* ShutdownWindow::showShutdownWindow(QMainWindow* window)
 
     // Show a simple window indicating shutdown status
     QWidget *shutdownWindow = new ShutdownWindow();
+    shutdownWindow->setObjectName("shutdownWindow");
     shutdownWindow->setWindowTitle(window->windowTitle());
 
     // Center shutdown window at where main window was

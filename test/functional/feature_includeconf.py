@@ -32,7 +32,11 @@ class IncludeConfTest(BitcoinTestFramework):
         # - tmpdir/node0/relative2.conf
         with open(os.path.join(self.options.tmpdir, "node0", "relative2.conf"), "w", encoding="utf8") as f:
             f.write("uacomment=relative2\n")
+<<<<<<< HEAD
         with open(os.path.join(self.options.tmpdir, "node0", "particl.conf"), "a", encoding='utf8') as f:
+=======
+        with open(os.path.join(self.options.tmpdir, "node0", "qtum.conf"), "a", encoding='utf8') as f:
+>>>>>>> project-a/time/qtumcore0.21
             f.write("uacomment=main\nincludeconf=relative.conf\n")
 
     def run_test(self):
@@ -70,7 +74,11 @@ class IncludeConfTest(BitcoinTestFramework):
             # Restore initial file contents
             f.write("uacomment=relative\n")
 
+<<<<<<< HEAD
         with open(os.path.join(self.options.tmpdir, "node0", "particl.conf"), "a", encoding='utf8') as f:
+=======
+        with open(os.path.join(self.options.tmpdir, "node0", "qtum.conf"), "a", encoding='utf8') as f:
+>>>>>>> project-a/time/qtumcore0.21
             f.write("includeconf=relative2.conf\n")
 
         self.start_node(0)

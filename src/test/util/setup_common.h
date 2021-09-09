@@ -76,6 +76,7 @@ static inline uint64_t InsecureRandBits(int bits) { return g_insecure_rand_ctx.r
 static inline uint64_t InsecureRandRange(uint64_t range) { return g_insecure_rand_ctx.randrange(range); }
 static inline bool InsecureRandBool() { return g_insecure_rand_ctx.randbool(); }
 
+<<<<<<< HEAD
 static inline void InsecureNewKey(CKey &key, bool fCompressed)
 {
     uint256 i = InsecureRand256();
@@ -89,6 +90,8 @@ static inline void InsecureRandBytes(uint8_t *p, size_t n)
     memcpy(p, i.begin(), n);
 }
 
+=======
+>>>>>>> project-a/time/qtumcore0.21
 /** Basic testing setup.
  * This just configures logging, data dir and chain parameters.
  */
@@ -116,7 +119,7 @@ struct TestingSetup : public BasicTestingSetup {
 /** Identical to TestingSetup, but chain set to regtest */
 struct RegTestingSetup : public TestingSetup {
     RegTestingSetup()
-        : TestingSetup{CBaseChainParams::REGTEST} {}
+        : TestingSetup{CBaseChainParams::UNITTEST} {}
 };
 
 class CBlock;

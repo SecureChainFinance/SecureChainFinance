@@ -1,12 +1,20 @@
 UNIX BUILD NOTES
 ====================
+<<<<<<< HEAD
 Some notes on how to build Particl Core in Unix.
+=======
+Some notes on how to build Qtum Core in Unix.
+>>>>>>> project-a/time/qtumcore0.21
 
 (For BSD specific instructions, see `build-*bsd.md` in this directory.)
 
 Note
 ---------------------
+<<<<<<< HEAD
 Always use absolute paths to configure and compile Particl Core and the dependencies.
+=======
+Always use absolute paths to configure and compile Qtum Core and the dependencies.
+>>>>>>> project-a/time/qtumcore0.21
 For example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -24,7 +32,11 @@ make
 make install # optional
 ```
 
+<<<<<<< HEAD
 This will build particl-qt as well, if the dependencies are met.
+=======
+This will build qtum-qt as well, if the dependencies are met.
+>>>>>>> project-a/time/qtumcore0.21
 
 Dependencies
 ---------------------
@@ -35,6 +47,7 @@ These dependencies are required:
  ------------|------------------|----------------------
  libboost    | Utility          | Library for threading, data structures, etc
  libevent    | Networking       | OS independent asynchronous networking
+ libgmp      | Math             | The GNU Multiple Precision Arithmetic Library
 
 Optional dependencies:
 
@@ -56,7 +69,11 @@ Memory Requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1.5 GB of
+<<<<<<< HEAD
 memory available when compiling Particl Core. On systems with less, gcc can be
+=======
+memory available when compiling Qtum Core. On systems with less, gcc can be
+>>>>>>> project-a/time/qtumcore0.21
 tuned to conserve memory with additional CXXFLAGS:
 
 
@@ -79,7 +96,7 @@ Finally, clang (often less resource hungry) can be used instead of gcc, which is
 
 Build requirements:
 
-    sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3
+    sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 libgmp3-dev
 
 Now, you can either build from self-compiled [depends](/depends/README.md) or install the required dependencies:
 
@@ -98,7 +115,11 @@ SQLite is required for the wallet:
 
     sudo apt install libsqlite3-dev
 
+<<<<<<< HEAD
 To build Particl Core without wallet, see [*Disable-wallet mode*](/doc/build-unix.md#disable-wallet-mode)
+=======
+To build Qtum Core without wallet, see [*Disable-wallet mode*](/doc/build-unix.md#disable-wallet-mode)
+>>>>>>> project-a/time/qtumcore0.21
 
 
 Optional (see `--with-miniupnpc` and `--enable-upnp-default`):
@@ -111,7 +132,11 @@ ZMQ dependencies (provides ZMQ API):
 
 GUI dependencies:
 
+<<<<<<< HEAD
 If you want to build particl-qt, make sure that the required packages for Qt development
+=======
+If you want to build qtum-qt, make sure that the required packages for Qt development
+>>>>>>> project-a/time/qtumcore0.21
 are installed. Qt 5 is necessary to build the GUI.
 To build without GUI pass `--without-gui`.
 
@@ -123,6 +148,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
+<<<<<<< HEAD
 USB Device dependencies:
 
 To build with USB Device support you need the following:
@@ -130,6 +156,9 @@ To build with USB Device support you need the following:
 sudo apt-get install libprotobuf-dev protobuf-compiler libhidapi-dev
 
 Once these are installed, they will be found by configure and a particl-qt executable will be
+=======
+Once these are installed, they will be found by configure and a qtum-qt executable will be
+>>>>>>> project-a/time/qtumcore0.21
 built by default.
 
 
@@ -139,7 +168,7 @@ built by default.
 
 Build requirements:
 
-    sudo dnf install gcc-c++ libtool make autoconf automake libevent-devel boost-devel libdb4-devel libdb4-cxx-devel python3
+    sudo dnf install gcc-c++ libtool make autoconf automake libevent-devel boost-devel libdb4-devel libdb4-cxx-devel python3 gmp-devel
 
 Optional (see `--with-miniupnpc` and `--enable-upnp-default`):
 
@@ -161,6 +190,7 @@ SQLite can be installed with:
 
     sudo dnf install sqlite-devel
 
+<<<<<<< HEAD
 protobuf (optional) can be installed with:
 
     sudo dnf install protobuf-devel
@@ -168,6 +198,25 @@ protobuf (optional) can be installed with:
 Notes
 -----
 The release is built with GCC and then "strip particld" to strip the debug
+=======
+Dependency Build Instructions: CentOS
+-------------------------------------
+
+You need to build boost manually, and if it's not in standard library paths, you need to add `/path/to/boost/lib` into `LD_LIBRARY_PATH` env when building Qtum.
+
+Build requirements:
+
+    sudo yum install epel-release
+    sudo yum install gcc-c++ libtool libdb4-cxx-devel openssl-devel libevent-devel gmp-devel
+    
+To build with Qt 5 (recommended) you need the following:
+
+    sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
+
+Notes
+-----
+The release is built with GCC and then "strip qtumd" to strip the debug
+>>>>>>> project-a/time/qtumcore0.21
 symbols, which reduces the executable size by about 90%.
 
 
@@ -208,7 +257,11 @@ If you need to build Boost yourself:
 
 Security
 --------
+<<<<<<< HEAD
 To help make your Particl Core installation more secure by making certain attacks impossible to
+=======
+To help make your Qtum Core installation more secure by making certain attacks impossible to
+>>>>>>> project-a/time/qtumcore0.21
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -230,7 +283,11 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
+<<<<<<< HEAD
     	scanelf -e ./particl
+=======
+    	scanelf -e ./qtum
+>>>>>>> project-a/time/qtumcore0.21
 
     The output should contain:
 
@@ -238,13 +295,21 @@ Hardening enables the following features:
     ET_DYN
 
 * _Non-executable Stack_: If the stack is executable then trivial stack-based buffer overflow exploits are possible if
+<<<<<<< HEAD
     vulnerable buffers are found. By default, Particl Core should be built with a non-executable stack,
+=======
+    vulnerable buffers are found. By default, Qtum Core should be built with a non-executable stack,
+>>>>>>> project-a/time/qtumcore0.21
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
+<<<<<<< HEAD
     `scanelf -e ./particl`
+=======
+    `scanelf -e ./qtum`
+>>>>>>> project-a/time/qtumcore0.21
 
     The output should contain:
 	STK/REL/PTL
@@ -254,7 +319,11 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
+<<<<<<< HEAD
 When the intention is to run only a P2P node without a wallet, Particl Core may be compiled in
+=======
+When the intention is to run only a P2P node without a wallet, Qtum Core may be compiled in
+>>>>>>> project-a/time/qtumcore0.21
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -274,9 +343,15 @@ Setup and Build Example: Arch Linux
 -----------------------------------
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
+<<<<<<< HEAD
     pacman -S git base-devel boost libevent python
     git clone https://github.com/particl/particl-core.git
     cd particl-core/
+=======
+    pacman -S git base-devel boost libevent python gmp
+    git clone https://github.com/qtumproject/qtum --recursive
+    cd qtum/
+>>>>>>> project-a/time/qtumcore0.21
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
